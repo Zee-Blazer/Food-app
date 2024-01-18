@@ -15,28 +15,28 @@ interface Colors {
 
 export const colors: Colors = {
     bg: {
-        primary: "",
-        secondary: "",
-        tertiary: ""
+        primary: "#FFFFFF", // White
+        secondary: "#F6F6F6", // Grey somethin
+        tertiary: "#F0F5FA" // Grey another thing
     },
     borders: {
-        primary: "",
-        secondary: "",
-        tertiary: ""
+        primary: "#FF7622", // Orangeish
+        secondary: "#EDEDED", //Greyish
+        tertiary: "#"
     },
     icons: {
-        primary: "",
-        secondary: "",
-        tertiary: ""
+        primary: "#FF7622", // Orangeish
+        secondary: "#121223",  // Blackish
+        tertiary: "#EDEDED" // Greyish
     },
     text: {
-        primary: "",
-        secondary: "",
-        tertiary: ""
+        primary: "#1E1D1D", // Blackish
+        secondary: "#676767", //Greyish
+        tertiary: "#FF7622" // Orangeish
     },
     buttons: {
-        primary: "",
-        secondary: "",
-        tertiary: ""
+        primary: "#FF7622", // Orangeish
+        secondary: "#FFFFFF", // White
+        tertiary: "#ECF0F4" // Greyish
     }
 };

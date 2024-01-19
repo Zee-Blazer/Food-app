@@ -4,7 +4,7 @@ interface LineHeights {
 };
 
 interface Spacing {
-    [index:number]: String
+    [index:number]: number
 };
 
 export const lineHeight: LineHeights = {
@@ -12,4 +12,4 @@ export const lineHeight: LineHeights = {
     para: "24px"
 }
 
-export const space: Spacing = ["7px", "8px", "10px", "12px", "14px", "16px", "24px", "32px", "54px", "78px"];
+export const space: Spacing = [7,8,10,12,14,16,24,32,54,78,118];

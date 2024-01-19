@@ -21,18 +21,19 @@ export const fontweights: FontWeights = {
 }
 
 export const fontSizes = {
-    sm: "12px",
-    lg: "18px",
-    medium: "15px",
-    xlg: "21px",
-    caption: "21px",
-    name: "16px",
-    button: "14px",
-    body: "16px",
-    title: "20px",
-    h5: "24px",
-    h4: "34px",
-    h3: "45px",
-    h2: "56px",
-    h1: "112px"
+    sm: 12,
+    sz: 14,
+    lg: 18,
+    medium: 15,
+    xlg: 21,
+    caption: 21,
+    name: 16,
+    button: 14,
+    body: 16,
+    title: 20,
+    h5: 24,
+    h4: 34,
+    h3: 45,
+    h2: 56,
+    h1: 112
 }

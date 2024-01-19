@@ -13,6 +13,7 @@ export const AuthNavigation = () => {
 
     return (
         <AuthStack.Navigator
+            initialRouteName="Onboarding"
             screenOptions={{
                 headerShown: false
             }}

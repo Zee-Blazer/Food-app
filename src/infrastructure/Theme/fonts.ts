@@ -1,5 +1,8 @@
 interface Fonts {
-    body: string
+    title: string,
+    header: String,
+    body: string,
+    caption: string
 }
 
 interface FontWeights {
@@ -10,7 +13,10 @@ interface FontWeights {
 }
 
 export const fonts: Fonts = {
-    body: "Sen"
+    title: "Sen-Bold",
+    body: "Sen-Regular",
+    caption: "Sen-Medium",
+    header: "Sen-ExtraBold"
 }
 
 export const fontweights: FontWeights = {

@@ -12,4 +12,4 @@ export const lineHeight: LineHeights = {
     para: "24px"
 }
 
-export const space: Spacing = [7,8,10,12,14,16,24,32,54,78,118];
+export const space: Spacing = [2,4,7,8,10,12,14,16,24,32,54,78,118];

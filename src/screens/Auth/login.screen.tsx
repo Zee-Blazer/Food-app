@@ -17,11 +17,12 @@ export const LoginScreen = () => {
             >
                 <View style={ loginStyle.headerBox }>
                     <Text style={ loginStyle.headerText }>Log In</Text>
+                    <Text style={ loginStyle.headerPara }>Please sign in to your existing account</Text>
                 </View>
             </ImageBackground>
-            {/* <View style={ loginStyle.formContainer }>
+            <View style={ loginStyle.formContainer }>
                 <Text>Something New</Text>
-            </View> */}
+            </View>
         </>
     )
 }

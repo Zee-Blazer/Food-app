@@ -26,7 +26,7 @@ export const BottomFormComponent: React.FC<Props> = ({ type }) => {
                 <Text style={ loginStyle.otherOpt }>
                     Don't have an account? <Text 
                             style={ loginStyle.otherOptLink }
-                            onPress={ () => navigation.navigate("Signup") }
+                            onPress={ () => navigation.push("Signup") }
                         >
                         SIGN UP
                     </Text>

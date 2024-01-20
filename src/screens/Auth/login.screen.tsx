@@ -7,6 +7,9 @@ import { FontAwesome } from '@expo/vector-icons';
 // Styling 
 import { loginStyle } from "../../styles/screens/login.styles";
 
+// CheckBox
+import CheckBox from '@react-native-community/checkbox';
+
 // Components
 import { TopImageComponent } from "../../components/Auth-Comp/top-image.component";
 import { BottomFormComponent } from "../../components/Auth-Comp/bottom-form.component";
@@ -19,6 +22,7 @@ export const LoginScreen = () => {
                 title="Log In"
                 subtitle="Please sign in to your existing account"
                 extra=""
+                back={ false }
             />
 
             <View style={ loginStyle.formContainer }>

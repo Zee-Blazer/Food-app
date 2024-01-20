@@ -1,5 +1,11 @@
 
-import { View, Text, ImageBackground } from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
+
+// Icon
+import { Ionicons } from '@expo/vector-icons';
+
+// Navigation
+import { useNavigation } from '@react-navigation/native';
 
 // Styling
 import { loginStyle } from '../../styles/screens/login.styles';
@@ -7,10 +13,13 @@ import { loginStyle } from '../../styles/screens/login.styles';
 interface Props {
     title: string,
     subtitle: string,
-    extra: string
+    extra: string, 
+    back: boolean
 }
 
-export const TopImageComponent: React.FC<Props> = ({ title, subtitle, extra }) => {
+export const TopImageComponent: React.FC<Props> = ({ title, subtitle, extra, back }) => {
+
+    const navigation = useNavigation();
 
     return (
         <ImageBackground 
@@ -19,8 +28,22 @@ export const TopImageComponent: React.FC<Props> = ({ title, subtitle, extra }) =
             style={ loginStyle.upperBg }
         >
             <View style={ loginStyle.headerBox }>
+                {
+                    back &&
+                    <TouchableOpacity 
+                        style={ loginStyle.backOptBtn } 
+                        onPress={ () => navigation.goBack() }
+                    >
+                        <Ionicons 
+                            name="chevron-back-sharp" size={32} color="#5E616F" 
+                            style={{ marginTop: 3, marginLeft: 3 }} 
+                        />
+                    </TouchableOpacity>
+                }
+
                 <Text style={ loginStyle.headerText }>{ title }</Text>
                 <Text style={ loginStyle.headerPara }>{ subtitle }</Text>
+                
             </View>
         </ImageBackground>
     )

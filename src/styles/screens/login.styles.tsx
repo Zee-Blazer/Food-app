@@ -44,6 +44,16 @@ export const loginStyle = StyleSheet.create({
         paddingVertical: theme.space[9],
         paddingHorizontal: theme.space[9]
     },
+    scrollFormContainer: {
+        backgroundColor: "white",
+        marginTop: -12,
+        borderTopLeftRadius: 24,
+        borderTopRightRadius: 24,
+        height: height *0.4,
+        paddingTop: theme.space[9],
+        paddingHorizontal: theme.space[9],
+        // paddingBottom: 550
+    },
     labelText: {
         fontFamily: theme.fonts.body,
         color: theme.colors.text.label,
@@ -114,6 +124,16 @@ export const loginStyle = StyleSheet.create({
     otherSignInLogoCont: {
         flexDirection: "row",
         justifyContent: "space-evenly",
-        marginVertical: theme.space[8]
+        marginVertical: theme.space[8],
+        marginBottom: theme.space[12]
+    },
+    backOptBtn: {
+        position: "absolute",
+        width: 40,
+        height: 40,
+        backgroundColor: "white",
+        top: -55,
+        left: 20,
+        borderRadius: 50
     }
 })

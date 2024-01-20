@@ -40,8 +40,80 @@ export const loginStyle = StyleSheet.create({
         marginTop: -12,
         borderTopLeftRadius: 24,
         borderTopRightRadius: 24,
-        height: height *0.7,
+        height: height *0.712,
         paddingVertical: theme.space[9],
         paddingHorizontal: theme.space[9]
+    },
+    labelText: {
+        fontFamily: theme.fonts.body,
+        color: theme.colors.text.label,
+        marginBottom: theme.space[2]
+    },
+    textInputStyle: {
+        backgroundColor: theme.colors.bg.tertiary,
+        paddingVertical: theme.space[8],
+        paddingHorizontal: theme.space[7],
+        borderRadius: 10,
+        marginBottom: theme.space[8],
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingRight: 24,
+        fontSize: 14,
+        fontFamily: theme.fonts.body,
+        color: "#32343E"
+    },
+    eyesIconStyle: {
+        marginLeft: theme.space[8]
+    },
+    checkBoxStyle: {
+        alignSelf: "center"
+    },
+    bottomFormRequest: {
+        flexDirection: "row",
+        justifyContent: "space-between"
+    },
+    forgotPasswordLink: {
+        color: theme.colors.text.tertiary,
+        fontSize: theme.fontSizes.sz,
+        fontFamily: theme.fonts.body
+    },
+    rememberCheckText: {
+        fontSize: 13,
+        color: "#7E8A97"
+    },
+    submitBtn: {
+        marginTop: 29,
+        marginBottom: 38,
+        backgroundColor: theme.colors.buttons.primary,
+        paddingVertical: 23,
+        borderRadius: 12,
+    },
+    submitBtnText: {
+        textAlign: 'center',
+        color: theme.colors.text.normal,
+        fontWeight: "bold",
+        fontFamily: theme.fonts.title
+    },
+    otherOpt: {
+        fontSize: theme.fontSizes.body,
+        color: "#646982",
+        fontFamily: theme.fonts.body,
+        textAlign: "center",
+        marginBottom: theme.space[9]
+    },
+    otherOptLink: {
+        fontFamily: theme.fonts.title,
+        color: theme.colors.text.tertiary
+    },
+    orText: {
+        textAlign: "center",
+        fontSize: theme.fontSizes.body,
+        color: "#646982",
+        fontFamily: theme.fonts.body,
+    },
+    otherSignInLogoCont: {
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        marginVertical: theme.space[8]
     }
 })

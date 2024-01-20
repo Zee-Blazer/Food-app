@@ -13,7 +13,7 @@ interface Colors {
     buttons: Ele
 }
 
-export const colors: Colors = {
+export const colors = {
     bg: {
         primary: "#FFFFFF", // White
         secondary: "#F6F6F6", // Grey somethin
@@ -32,7 +32,10 @@ export const colors: Colors = {
     text: {
         primary: "#1E1D1D", // Blackish
         secondary: "#676767", //Greyish
-        tertiary: "#FF7622" // Orangeish
+        tertiary: "#FF7622", // Orangeish
+        label: "#32343E",
+        placeholder: "#A0A5BA",
+        normal: "#FFFFFF"
     },
     buttons: {
         primary: "#FF7622", // Orangeish

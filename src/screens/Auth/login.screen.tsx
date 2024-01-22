@@ -1,20 +1,21 @@
+import React, { useState } from 'react';
 
-import { Text, View, TextInput, TouchableOpacity } from "react-native";
-
-// Icons
-import { FontAwesome } from '@expo/vector-icons';
+import { Text, View, KeyboardAvoidingView } from "react-native";
 
 // Styling 
 import { loginStyle } from "../../styles/screens/login.styles";
 
-// CheckBox
-import CheckBox from '@react-native-community/checkbox';
-
 // Components
-import { TopImageComponent } from "../../components/Auth-Comp/top-image.component";
-import { BottomFormComponent } from "../../components/Auth-Comp/bottom-form.component";
+import { TopImageComponent } from "../../components/Auth-Comp/top-image.component"; // The Top bar image and write up
+import { BottomFormComponent } from "../../components/Auth-Comp/bottom-form.component"; // The bottom Sign In options
+import { InputFieldComponent } from "../../components/Auth-Comp/input-field.component"; // Simplify the TextInput field
+import { FormBtnComponent } from '../../components/Auth-Comp/form-btn.component'; // Simplified Button
+import { RememberForgotComponent } from '../../components/Auth-Comp/remember-forgot.component'; // Remember and Forgotten Password
 
 export const LoginScreen = () => {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState<string>("");
 
     return (
         <>
@@ -26,57 +27,37 @@ export const LoginScreen = () => {
             />
 
             <View style={ loginStyle.formContainer }>
-                
-                <View>
-                    <Text style={ loginStyle.labelText }>EMAIL</Text>
-                    <TextInput 
-                        placeholder="example@gmail.com" 
-                        style={ loginStyle.textInputStyle }
-                        autoCapitalize="none"
-                        autoCorrect={ false }
+
+                <KeyboardAvoidingView>
+
+                    <InputFieldComponent 
+                        type="text"
+                        label='EMAIL'
+                        placeholder='example@gmail.com'
+                        value={ email }
+                        setValue={ setEmail }
                     />
-                </View>
 
-                <View>
-                    <Text style={ loginStyle.labelText }>PASSWORD</Text>
-                    <View style={ loginStyle.textInputStyle }>
-                        <TextInput 
-                            placeholder="* * * * * * * * * *" 
-                            secureTextEntry={ true }
-                            autoCapitalize="none"
-                            autoCorrect={ false }
-                            style={{ flex: 1 }}
-                        />
-                        { 
-                            true ? 
-                            <FontAwesome 
-                                name="eye" size={14} color="black" 
-                                style={ loginStyle.eyesIconStyle } 
-                            />
-                            :
-                            <FontAwesome 
-                                name="eye-slash" size={19} color="black" 
-                                style={ loginStyle.eyesIconStyle } 
-                            />
-                        }
-                    </View>
-                </View>
-                
-                <View style={ loginStyle.bottomFormRequest }>
-                    <View>
-                        {/* <CheckBoxBase value={ false } style={ loginStyle.checkBoxStyle } /> */}
-                        <Text style={ loginStyle.rememberCheckText }>Remember me</Text>
-                    </View>
-                    <Text style={ loginStyle.forgotPasswordLink }>Forgot Password</Text>
-                </View>
+                    <InputFieldComponent 
+                        type="pass"
+                        label='PASSWORD'
+                        placeholder="* * * * * * * * * *" 
+                        value={ password }
+                        setValue={ setPassword }
+                    />
+                    
+                    <RememberForgotComponent />
 
-                <TouchableOpacity style={ loginStyle.submitBtn }>
-                    <Text style={ loginStyle.submitBtnText }>LOG IN</Text>
-                </TouchableOpacity>
+                    <FormBtnComponent 
+                        title="LOG IN"
+                        func={ () => {} }
+                    />
 
-                <BottomFormComponent 
-                    type="login"
-                />
+                    <BottomFormComponent 
+                        type="login"
+                    />
+
+                </KeyboardAvoidingView>
 
             </View>
         </>

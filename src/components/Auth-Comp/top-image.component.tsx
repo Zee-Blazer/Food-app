@@ -43,7 +43,10 @@ export const TopImageComponent: React.FC<Props> = ({ title, subtitle, extra, bac
 
                 <Text style={ loginStyle.headerText }>{ title }</Text>
                 <Text style={ loginStyle.headerPara }>{ subtitle }</Text>
-                
+                {  
+                    extra.length > 1 &&
+                    <Text style={ loginStyle.headerExtra }>example@gmail.com</Text>
+                }
             </View>
         </ImageBackground>
     )

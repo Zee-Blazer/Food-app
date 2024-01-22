@@ -31,9 +31,15 @@ export const loginStyle = StyleSheet.create({
     headerPara: {
         textAlign: "center",
         fontSize: theme.fontSizes.medium,
-        marginTop: theme.space[2],
+        marginTop: theme.space[3],
         color: "white",
         fontFamily: theme.fonts.body
+    },
+    headerExtra: {
+        textAlign: "center",
+        fontSize: theme.fontSizes.title,
+        color: "white",
+        fontFamily: theme.fonts.body,
     },
     formContainer: {
         backgroundColor: "white",

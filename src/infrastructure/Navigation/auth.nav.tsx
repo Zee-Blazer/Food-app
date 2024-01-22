@@ -8,6 +8,7 @@ import { LoginScreen } from "../../screens/Auth/login.screen";
 import { SignupScreen } from "../../screens/Auth/signup.screen";
 import { OnboardingScreen } from "../../screens/Auth/onboarding.screen";
 import { ForgotPasswordScreen } from "../../screens/Auth/forgot-password.screen";
+import { OtpVerificationScreen } from "../../screens/Auth/otp-verification.screen";
 
 const AuthStack = createStackNavigator();
 
@@ -44,6 +45,11 @@ export const AuthNavigation = () => {
             <AuthStack.Screen 
                 name="ForgotPassword" 
                 component={ ForgotPasswordScreen } 
+            />
+
+            <AuthStack.Screen 
+                name="OtpVerification" 
+                component={ OtpVerificationScreen } 
             />
 
         </AuthStack.Navigator>

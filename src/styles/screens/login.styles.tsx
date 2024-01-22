@@ -141,5 +141,31 @@ export const loginStyle = StyleSheet.create({
         top: -55,
         left: 20,
         borderRadius: 50
+    },
+    otpContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    otpInput: {
+        width: 62,
+        height: 62,
+        margin: 7,
+        textAlign: 'center',
+        fontSize: 18,
+        borderRadius: 10,
+        backgroundColor: "#F0F5FA"
+    },
+    verifyCountCont: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginBottom: 9
+    },
+    verifyCodeText: {
+        fontFamily: theme.fonts.body,
+        fontSize: theme.fontSizes.sz
+    },
+    verifyBoldText: {
+        textDecorationLine: "underline",
+        fontWeight: "700"
     }
 })

@@ -2,7 +2,7 @@
 import { Text, TouchableOpacity } from 'react-native';
 
 // Styles
-import { loginStyle } from '../../styles/screens/login.styles';
+import { loginStyle } from '../../styles/screens/login-auth.styles';
 
 interface Props {
     title: string,

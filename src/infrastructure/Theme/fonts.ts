@@ -6,10 +6,10 @@ interface Fonts {
 }
 
 interface FontWeights {
-    regular: number,
-    medium: number,
-    bold: number,
-    extraBold: number
+    regular: string,
+    medium: string,
+    bold: string,
+    extraBold: string
 }
 
 export const fonts: Fonts = {
@@ -20,10 +20,10 @@ export const fonts: Fonts = {
 }
 
 export const fontweights: FontWeights = {
-    regular: 400,
-    medium: 500,
-    bold: 700,
-    extraBold: 900
+    regular: "400",
+    medium: "500",
+    bold: "700",
+    extraBold: "900"
 }
 
 export const fontSizes = {

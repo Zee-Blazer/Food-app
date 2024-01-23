@@ -1,0 +1,45 @@
+
+import { View, Text, TouchableOpacity, Image } from 'react-native';
+
+// Icon
+import { Feather } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+
+// Navigation
+import { useNavigation } from '@react-navigation/native';
+
+// Styling
+import { homeUsersScreenStyles } from '../../styles/screens/home-users.styles';
+
+export const DashboardHeaderComponent = () => {
+
+    const navigation = useNavigation();
+
+    return (
+        <>
+            <View style={ homeUsersScreenStyles.flexDisplay }>
+                <TouchableOpacity onPress={ () => navigation.openDrawer() } >
+                    <Image source={ require("../../../assets/Images/menu.png") } />
+                </TouchableOpacity>
+                
+                <View style={ homeUsersScreenStyles.headerTextCont }>
+                    <Text style={ homeUsersScreenStyles.titleText }>DELIVER TO</Text>
+                    <TouchableOpacity style={ homeUsersScreenStyles.flexDisplay }>
+                        <Text style={ homeUsersScreenStyles.nextTextLoc }>Holal Lab office</Text>
+                        <AntDesign name="caretdown" size={10} color="black" style={ homeUsersScreenStyles.smallDownIcon } />
+                    </TouchableOpacity>
+                </View>
+            </View>
+
+            <View style={ homeUsersScreenStyles.shopChartNote }>
+                <Feather 
+                    name="shopping-bag" size={24} color="white" 
+                    style={ homeUsersScreenStyles.shopChartNoteIcon }
+                />
+                <View style={ homeUsersScreenStyles.shopChartNoteMsg }>
+                    <Text style={ homeUsersScreenStyles.shopChartNoteMsgTxt }>2</Text>
+                </View>
+            </View>
+        </>
+    )
+}

@@ -12,7 +12,11 @@ const DashboardDrawer = createDrawerNavigator();
 export const DashboardNavigation = () => {
 
     return (
-        <DashboardDrawer.Navigator>
+        <DashboardDrawer.Navigator
+            screenOptions={{
+                headerShown: false
+            }}
+        >
             <DashboardDrawer.Screen name="Home" component={ HomeScreen } />
         </DashboardDrawer.Navigator>
     )

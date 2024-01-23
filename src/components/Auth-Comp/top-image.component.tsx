@@ -8,7 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 // Styling
-import { loginStyle } from '../../styles/screens/login.styles';
+import { loginStyle } from '../../styles/screens/login-auth.styles';
 
 interface Props {
     title: string,

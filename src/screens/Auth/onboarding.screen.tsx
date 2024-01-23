@@ -11,7 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Text, View, TouchableOpacity } from "react-native";
 
 // Styling
-import { onboardingScreenStyles } from '../../styles/screens/onboarding.styles';
+import { onboardingScreenStyles } from '../../styles/screens/onboarding-auth.styles';
 
 export const OnboardingScreen = () => {
 

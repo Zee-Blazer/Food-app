@@ -5,7 +5,7 @@ import { View, Text, TextInput } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 // Styling
-import { loginStyle } from '../../styles/screens/login.styles';
+import { loginStyle } from '../../styles/screens/login-auth.styles';
 
 interface Props {
     type: string,

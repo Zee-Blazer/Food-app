@@ -5,7 +5,7 @@ import { View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 // Styling
-import { loginStyle } from '../../styles/screens/login.styles';
+import { loginStyle } from '../../styles/screens/login-auth.styles';
 
 export const RememberForgotComponent = () => {
 

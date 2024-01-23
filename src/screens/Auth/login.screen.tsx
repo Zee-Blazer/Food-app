@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Text, View, KeyboardAvoidingView } from "react-native";
 
 // Styling 
-import { loginStyle } from "../../styles/screens/login.styles";
+import { loginStyle } from "../../styles/screens/login-auth.styles";
 
 // Components
 import { TopImageComponent } from "../../components/Auth-Comp/top-image.component"; // The Top bar image and write up

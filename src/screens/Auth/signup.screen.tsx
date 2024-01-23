@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Text, View, KeyboardAvoidingView, ScrollView } from "react-native";
 
 // Styling
-import { loginStyle } from "../../styles/screens/login.styles";
+import { loginStyle } from "../../styles/screens/login-auth.styles";
 
 // Icons
 import { FontAwesome } from '@expo/vector-icons';

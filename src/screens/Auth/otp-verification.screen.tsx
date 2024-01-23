@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Text, View, TextInput, KeyboardAvoidingView } from "react-native";
 
 // Styles
-import { loginStyle } from "../../styles/screens/login.styles";
+import { loginStyle } from "../../styles/screens/login-auth.styles";
 
 // Components
 import { TopImageComponent } from "../../components/Auth-Comp/top-image.component";

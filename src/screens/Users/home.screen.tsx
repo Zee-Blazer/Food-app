@@ -1,15 +1,18 @@
 
-import { SafeAreaView } from "react-native-safe-area-context";
+// Navigation
+import { useNavigation } from "@react-navigation/native"
 
 import { Text, View } from "react-native"
 
 export const HomeScreen = () => {
 
+    const navigation = useNavigation();
+
     return (
-        <SafeAreaView>
-            <View>
-                <Text>Home Screen</Text>
-            </View>
-        </SafeAreaView>
+        <View>
+            <Text
+                onPress={ () => navigation.navigate("Search") }
+            >Home Screen</Text>
+        </View>
     )
 }

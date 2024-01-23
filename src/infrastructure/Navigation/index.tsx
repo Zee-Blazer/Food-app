@@ -5,11 +5,12 @@ import { NavigationContainer } from "@react-navigation/native";
 import { AuthNavigation } from "./auth.nav";
 
 // Users Stack Navigation
-import { UsersNavigation } from "./user.nav";
+import { UsersNavigation } from "./User-Navigation";
+import { DashboardNavigation } from "./User-Navigation/dashboard.nav";
 
 export const Navigation = () => {
 
-    const isAuthenticated = !!true;
+    const isAuthenticated = !!false;
 
     return (
         <NavigationContainer>

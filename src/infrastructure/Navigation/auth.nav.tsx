@@ -1,7 +1,11 @@
+import React, { useState, useEffect } from 'react';
 
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { Text } from 'react-native';
+
+// Async Storage
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 // Screens 
 import { LoginScreen } from "../../screens/Auth/login.screen";
@@ -12,46 +16,54 @@ import { OtpVerificationScreen } from "../../screens/Auth/otp-verification.scree
 
 const AuthStack = createStackNavigator();
 
-export const AuthNavigation = () => {
+export const AuthNavigation: React.FC = () => {
 
-    return (
-        <AuthStack.Navigator
-            initialRouteName="Onboarding"
-            screenOptions={{
-                headerShown: false
-            }}
-        >
+    const [screen, setScreen] = useState<string>("Onboarding");
 
-            <AuthStack.Screen 
-                name="Login" 
-                component={ LoginScreen } 
-            />
+    useEffect( () => {
+        const doSomthing = async () => {
+            if(await AsyncStorage.getItem("Next") != "Onboarding"){
+                setScreen("Login")
+            }
+        }
+        doSomthing();
+    }, [] )
 
-            <AuthStack.Screen 
-                name="Signup" 
-                component={ SignupScreen } 
-                options={ ({ navigation, route }) => ({
-                    headerLeft: () => (
-                        <Text style={{ color: "white", fontSize: 230 }}>Back</Text>
-                    )
-                }) }
-            />
+    console.log(screen)
 
-            <AuthStack.Screen 
-                name="Onboarding" 
-                component={ OnboardingScreen } 
-            />
+    if(screen.length > 1 && screen != "Login"){
+        return (
+            <AuthStack.Navigator
+                initialRouteName="Onboarding"
+                screenOptions={{
+                    headerShown: false
+                }}
+            >
+                <AuthStack.Screen name="Login" component={ LoginScreen } />
+                <AuthStack.Screen name="Signup" component={ SignupScreen } />
+                <AuthStack.Screen name="Onboarding" component={ OnboardingScreen } />
+                <AuthStack.Screen name="ForgotPassword" component={ ForgotPasswordScreen } />
+                <AuthStack.Screen name="OtpVerification" component={ OtpVerificationScreen } />
+    
+            </AuthStack.Navigator>
+        )
+    }
+    else{
+        return (
+            <AuthStack.Navigator
+                initialRouteName="Login"
+                screenOptions={{
+                    headerShown: false
+                }}
+            >
+                <AuthStack.Screen name="Login" component={ LoginScreen } />
+                <AuthStack.Screen name="Signup" component={ SignupScreen } />
+                <AuthStack.Screen name="Onboarding" component={ OnboardingScreen } />
+                <AuthStack.Screen name="ForgotPassword" component={ ForgotPasswordScreen } />
+                <AuthStack.Screen name="OtpVerification" component={ OtpVerificationScreen } />
+    
+            </AuthStack.Navigator>
+        )
+    }
 
-            <AuthStack.Screen 
-                name="ForgotPassword" 
-                component={ ForgotPasswordScreen } 
-            />
-
-            <AuthStack.Screen 
-                name="OtpVerification" 
-                component={ OtpVerificationScreen } 
-            />
-
-        </AuthStack.Navigator>
-    )
 }

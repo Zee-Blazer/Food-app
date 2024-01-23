@@ -1,11 +1,13 @@
 
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 
 export const SearchScreen = () => {
 
     return (
-        <View>
-            <Text>The Search Screen</Text>
-        </View>
+        <SafeAreaView>
+            <View>
+                <Text>The Search Screen</Text>
+            </View>
+        </SafeAreaView>
     )
 }

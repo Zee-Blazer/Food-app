@@ -21,7 +21,8 @@ export const onboardingScreenStyles = StyleSheet.create({
         width: width*0.8,
         marginRight: width*0.1,
         textAlign: "center",
-        borderRadius: theme.sizes[0]
+        borderRadius: theme.sizes[0],
+        fontFamily: theme.fonts.body
     },
     nextButton: {
         padding: 10,
@@ -29,7 +30,8 @@ export const onboardingScreenStyles = StyleSheet.create({
         width: width*0.2,
         marginRight: 6,
         textAlign: "center",
-        borderRadius: theme.sizes[0]
+        borderRadius: theme.sizes[0],
+        fontFamily: theme.fonts.body
     },
     skipButton: {
         padding: 10,
@@ -37,7 +39,8 @@ export const onboardingScreenStyles = StyleSheet.create({
         width: width*0.2,
         marginLeft: 6,
         textAlign: "center",
-        borderRadius: theme.sizes[0]
+        borderRadius: theme.sizes[0],
+        fontFamily: theme.fonts.body
     },
     btnText: {
         textAlign: "center",
@@ -48,5 +51,15 @@ export const onboardingScreenStyles = StyleSheet.create({
     flexOpose: {
         display: "flex",
         flexDirection: "row"
+    },
+    titleOnboarding: {
+        fontSize: theme.fontSizes.h5,
+        fontFamily: theme.fonts.header,
+        color: "#32343E"
+    },
+    subTitleOnboarding: {
+        fontSize: theme.fontSizes.body,
+        fontFamily: theme.fonts.body,
+        color: "#646982"
     }
 })

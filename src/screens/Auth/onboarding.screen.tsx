@@ -2,6 +2,9 @@
 import Onboarding from 'react-native-onboarding-swiper';
 import LottieView from 'lottie-react-native';
 
+// Async Storage
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 // Navigation 
 import { useNavigation } from '@react-navigation/native';
 
@@ -34,7 +37,10 @@ export const OnboardingScreen = () => {
         </TouchableOpacity>
     )
 
-    const handleDone = () => navigation.navigate("Login")
+    const handleDone = async () => {
+        await AsyncStorage.setItem("Next", "Login");
+        navigation.navigate("Login")
+    }
 
     return (
         <View style={ onboardingScreenStyles.container }>
@@ -46,6 +52,8 @@ export const OnboardingScreen = () => {
                 DoneButtonComponent={ doneButton }
                 SkipButtonComponent={ skipButton }
                 NextButtonComponent={ nextButton }
+                titleStyles={ onboardingScreenStyles.titleOnboarding }
+                subTitleStyles={ onboardingScreenStyles.subTitleOnboarding }
                 pages={[
                     {
                         backgroundColor: '#fff',

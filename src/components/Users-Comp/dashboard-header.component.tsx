@@ -16,7 +16,7 @@ export const DashboardHeaderComponent = () => {
     const navigation = useNavigation();
 
     return (
-        <>
+        <View style={ homeUsersScreenStyles.flexDesign }>
             <View style={ homeUsersScreenStyles.flexDisplay }>
                 <TouchableOpacity onPress={ () => navigation.openDrawer() } >
                     <Image source={ require("../../../assets/Images/menu.png") } />
@@ -31,7 +31,7 @@ export const DashboardHeaderComponent = () => {
                 </View>
             </View>
 
-            <View style={ homeUsersScreenStyles.shopChartNote }>
+            <TouchableOpacity style={ homeUsersScreenStyles.shopChartNote }>
                 <Feather 
                     name="shopping-bag" size={24} color="white" 
                     style={ homeUsersScreenStyles.shopChartNoteIcon }
@@ -39,7 +39,7 @@ export const DashboardHeaderComponent = () => {
                 <View style={ homeUsersScreenStyles.shopChartNoteMsg }>
                     <Text style={ homeUsersScreenStyles.shopChartNoteMsgTxt }>2</Text>
                 </View>
-            </View>
-        </>
+            </TouchableOpacity>
+        </View>
     )
 }

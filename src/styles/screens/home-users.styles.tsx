@@ -9,11 +9,13 @@ export const homeUsersScreenStyles = StyleSheet.create({
         flex: 1,
         marginHorizontal: theme.space[9],
         backgroundColor: "white",
+    },
+    flexDesign: {
         flexDirection: "row",
         justifyContent: "space-between"
     },
     flexDisplay: {
-        flexDirection: "row"
+        flexDirection: "row",
     },
     titleText: {
         color: theme.colors.text.tertiary,
@@ -56,5 +58,48 @@ export const homeUsersScreenStyles = StyleSheet.create({
     shopChartNoteIcon: {
         marginTop: 10,
         marginLeft: 10
+    },
+    greetingsFull: {
+        marginTop: theme.space[8],
+        fontSize: theme.fontSizes.name,
+        fontFamily: theme.fonts.body
+    },
+    strong: {
+        fontFamily: theme.fonts.title
+    },
+    searchBarCont: {
+        marginTop: theme.space[7],
+        marginBottom: theme.space[9],
+        flexDirection: "row",
+        paddingHorizontal: 20,
+        paddingVertical: 24,
+        backgroundColor: "#F6F6F6",
+        borderRadius: 10
+    },
+    searchBarTxt: {
+        flex: 1,
+        marginHorizontal: theme.space[5],
+        fontSize: theme.fontSizes.sz,
+        fontFamily: theme.fonts.body,
+        color: "#181C2E"
+    },
+    cateHeadTxt: {
+        fontSize: 20,
+        fontFamily: theme.fonts.body,
+        color: theme.colors.text.label
+    },
+    cateSeeAllTxt: {
+        fontSize: 16, //theme.fontSizes.medium
+        color: "#333333",
+        marginTop: 6
+    },
+    boxSpacing: {
+        marginTop: 20,
+        marginBottom: theme.space[9]
+    },
+    displayImg: {
+        width: 44,
+        height: 44,
+        borderRadius: 50
     }
 });

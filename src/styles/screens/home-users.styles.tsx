@@ -1,5 +1,5 @@
 
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 
 // Theme Styles
 import { theme } from "../../infrastructure/Theme";
@@ -69,7 +69,7 @@ export const homeUsersScreenStyles = StyleSheet.create({
     },
     searchBarCont: {
         marginTop: theme.space[7],
-        marginBottom: theme.space[9],
+        // marginBottom: theme.space[9],
         flexDirection: "row",
         paddingHorizontal: 20,
         paddingVertical: 24,
@@ -83,6 +83,12 @@ export const homeUsersScreenStyles = StyleSheet.create({
         fontFamily: theme.fonts.body,
         color: "#181C2E"
     },
+    spaceTop: {
+        marginTop: 32
+    },
+    spaceTopLittle: {
+        marginTop: 14
+    },
     cateHeadTxt: {
         fontSize: 20,
         fontFamily: theme.fonts.body,
@@ -95,11 +101,76 @@ export const homeUsersScreenStyles = StyleSheet.create({
     },
     boxSpacing: {
         marginTop: 20,
-        marginBottom: theme.space[9]
+        // marginBottom: theme.space[9]
+    },
+    boxShadow: {
+        ...Platform.select({
+            ios: {
+              shadowColor: 'black',
+              shadowOffset: { width: 0, height: 2 },
+              shadowOpacity: 0.2,
+              shadowRadius: 4,
+            },
+            android: {
+              elevation: 4,
+            },
+          }),
     },
     displayImg: {
         width: 44,
         height: 44,
         borderRadius: 50
+    },
+    innerSpace: {
+        paddingVertical: 7,
+        marginHorizontal: -2
+    },
+    specialBgColor: {
+        backgroundColor: "#FFD27C"
+    },
+    specialBgWhite: {
+        backgroundColor: "white"
+    },
+    cateStoreItemText: {
+        color: "#32343E",
+        fontSize: theme.fontSizes.sz,
+        fontFamily: theme.fonts.title,
+        marginHorizontal: 12,
+        marginTop: 12
+    },
+    cateStoreItem: {
+        padding: 8,
+        borderRadius: 39,
+        marginRight: 7
+    },
+    restaurantCont: {
+        marginTop: 18,
+        marginBottom: 10
+    },
+    restaurantImg: {
+        width: 360,
+        height: 137,
+        borderRadius: 10
+    },
+    restaurantContHeaderTxt: {
+        fontSize: theme.fontSizes.title,
+        fontFamily: theme.fonts.body,
+        marginTop: 8,
+        color: "#181C2E"
+    },
+    restaurantContSubHeaderTxt: {
+        color: "#A0A5BA",
+        fontSize: theme.fontSizes.sz,
+        fontFamily: theme.fonts.body,
+        marginTop: 5
+    },
+    iconTextCont: {
+        marginRight: theme.space[8]
+    },
+    iconText: {
+        fontSize: theme.fontSizes.body,
+        fontFamily: theme.fonts.title,
+        marginTop: 1,
+        marginLeft: 4
     }
 });

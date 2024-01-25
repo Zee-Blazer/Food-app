@@ -2,11 +2,7 @@
 // Navigation
 import { useNavigation } from "@react-navigation/native";
 
-import { SafeAreaView, Text, View, ScrollView, TouchableOpacity, Image } from "react-native";
-
-// Icons
-import { FontAwesome } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { SafeAreaView, Text, View, ScrollView, } from "react-native";
 
 // Stylings
 import { homeUsersScreenStyles } from "../../styles/screens/home-users.styles";
@@ -15,10 +11,10 @@ import { homeUsersScreenStyles } from "../../styles/screens/home-users.styles";
 import { DashboardHeaderComponent } from "../../components/Users-Comp/dashboard-header.component";
 import { Greetingscomponent } from "../../components/Users-Comp/greetings.component";
 import { SearchBarContComponent } from "../../components/Users-Comp/search-bar-cont.component";
-// import { CategoriesHeaderText } from "../../components/Users-Comp/category-header-text.component";
 import { CategoriesHeaderText } from "../../components/Users-Comp/Categories/category-header-text.component";
-// import { CategoryItemContainerComponent } from "../../components/Users-Comp/category-item-container.component";
 import { CategoryItemContainerComponent } from "../../components/Users-Comp/Categories/category-item-container.component";
+import { DeliveryDetailsComponent } from "../../components/Users-Comp/Restaurants/delivery-detail.component";
+import { RestaurantDetailContainerComponent } from "../../components/Users-Comp/Restaurants/restaurant-details-container.component";
 
 export const HomeScreen = () => {
 
@@ -29,67 +25,21 @@ export const HomeScreen = () => {
             <View style={ homeUsersScreenStyles.body }>
                 <DashboardHeaderComponent />
 
-                <Greetingscomponent 
-                    name="Halal"
-                />
+                <ScrollView
+                    showsVerticalScrollIndicator={false}
+                >
 
-                <SearchBarContComponent />
-
-                <CategoryItemContainerComponent />
-
-                <View>
-                    <CategoriesHeaderText 
-                        cateName="Open Restaurants"
+                    <Greetingscomponent 
+                        name="Halal"
                     />
 
-                    <TouchableOpacity style={ homeUsersScreenStyles.restaurantCont }>
-                        <Image 
-                            source={ require("../../../assets/Images/Restaurants/resturant1.jpg") }
-                            style={ homeUsersScreenStyles.restaurantImg }
-                        />
-                        <Text style={ homeUsersScreenStyles.restaurantContHeaderTxt }>
-                            Rose Garden Restaurant
-                        </Text>
-                        <Text style={ homeUsersScreenStyles.restaurantContSubHeaderTxt }>
-                            Burger - Chiken - Riche - Wings 
-                        </Text>
+                    <SearchBarContComponent />
 
-                        <View 
-                            style={[ 
-                                homeUsersScreenStyles.flexDisplay, 
-                                homeUsersScreenStyles.spaceTopLittle 
-                            ]}
-                        >
-                            <View 
-                                style={[ 
-                                    homeUsersScreenStyles.flexDisplay, 
-                                    homeUsersScreenStyles.iconTextCont 
-                                ]}
-                            >
-                                <FontAwesome name="star-o" size={20} color="#FF7622" />
-                                <Text style={ homeUsersScreenStyles.iconText }>4.7</Text>
-                            </View>
-                            <View 
-                                style={[ 
-                                    homeUsersScreenStyles.flexDisplay,
-                                    homeUsersScreenStyles.iconTextCont 
-                                ]}
-                            >
-                                <MaterialCommunityIcons name="truck-fast-outline" size={22} color="#FF7622" />
-                                <Text style={ homeUsersScreenStyles.iconText }>Free</Text>
-                            </View>
-                            <View 
-                                style={[ 
-                                    homeUsersScreenStyles.flexDisplay,
-                                    homeUsersScreenStyles.iconTextCont 
-                                ]}
-                            >
-                                <MaterialCommunityIcons name="clock-outline" size={20} color="#FF7622" />
-                                <Text style={ homeUsersScreenStyles.iconText }>20 min</Text>
-                            </View>
-                        </View>
-                    </TouchableOpacity>
-                </View>
+                    <CategoryItemContainerComponent />
+
+                    <RestaurantDetailContainerComponent />
+
+                </ScrollView>
                 
             </View>
         </SafeAreaView>

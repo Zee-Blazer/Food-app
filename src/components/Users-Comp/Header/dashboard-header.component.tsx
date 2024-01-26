@@ -9,7 +9,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 // Styling
-import { homeUsersScreenStyles } from '../../styles/screens/home-users.styles';
+import { homeUsersScreenStyles } from '../../../styles/screens/home-users.styles';
 
 export const DashboardHeaderComponent = () => {
 
@@ -19,7 +19,7 @@ export const DashboardHeaderComponent = () => {
         <View style={ homeUsersScreenStyles.flexDesign }>
             <View style={ homeUsersScreenStyles.flexDisplay }>
                 <TouchableOpacity onPress={ () => navigation.openDrawer() } >
-                    <Image source={ require("../../../assets/Images/menu.png") } />
+                    <Image source={ require("../../../../assets/Images/menu.png") } />
                 </TouchableOpacity>
                 
                 <View style={ homeUsersScreenStyles.headerTextCont }>

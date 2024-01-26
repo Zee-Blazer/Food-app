@@ -8,12 +8,10 @@ import { SafeAreaView, Text, View, ScrollView, } from "react-native";
 import { homeUsersScreenStyles } from "../../styles/screens/home-users.styles";
 
 // Component 
-import { DashboardHeaderComponent } from "../../components/Users-Comp/dashboard-header.component";
+import { DashboardHeaderComponent } from "../../components/Users-Comp/Header/dashboard-header.component";
 import { Greetingscomponent } from "../../components/Users-Comp/greetings.component";
 import { SearchBarContComponent } from "../../components/Users-Comp/search-bar-cont.component";
-import { CategoriesHeaderText } from "../../components/Users-Comp/Categories/category-header-text.component";
 import { CategoryItemContainerComponent } from "../../components/Users-Comp/Categories/category-item-container.component";
-import { DeliveryDetailsComponent } from "../../components/Users-Comp/Restaurants/delivery-detail.component";
 import { RestaurantDetailContainerComponent } from "../../components/Users-Comp/Restaurants/restaurant-details-container.component";
 
 export const HomeScreen = () => {
@@ -33,7 +31,9 @@ export const HomeScreen = () => {
                         name="Halal"
                     />
 
-                    <SearchBarContComponent />
+                    <SearchBarContComponent 
+                        redirect={ true }
+                    />
 
                     <CategoryItemContainerComponent />
 

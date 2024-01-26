@@ -8,10 +8,11 @@ import { Feather } from '@expo/vector-icons';
 import { homeUsersScreenStyles } from '../../../styles/screens/home-users.styles';
 
 interface Props {
-    cateName: string
+    cateName: string,
+    seeAll: boolean
 }
 
-export const CategoriesHeaderText: React.FC<Props> = ({ cateName }) => {
+export const CategoriesHeaderText: React.FC<Props> = ({ cateName, seeAll }) => {
 
     return (
         <View 
@@ -22,11 +23,14 @@ export const CategoriesHeaderText: React.FC<Props> = ({ cateName }) => {
             ]}
         >
             <Text style={ homeUsersScreenStyles.cateHeadTxt }>{ cateName }</Text>
-            <TouchableOpacity>
-                <Text style={ homeUsersScreenStyles.cateSeeAllTxt }>
-                    See All <Feather name="chevron-right" size={14} color="#A0A5BA" />
-                </Text>
-            </TouchableOpacity>
+            {
+                seeAll &&
+                <TouchableOpacity>
+                    <Text style={ homeUsersScreenStyles.cateSeeAllTxt }>
+                        See All <Feather name="chevron-right" size={14} color="#A0A5BA" />
+                    </Text>
+                </TouchableOpacity>
+            }
         </View>
     )
 }

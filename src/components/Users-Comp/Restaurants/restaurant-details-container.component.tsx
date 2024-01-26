@@ -11,6 +11,7 @@ export const RestaurantDetailContainerComponent = () => {
         <View>
             <CategoriesHeaderText 
                 cateName="Open Restaurants"
+                seeAll={ true }
             />
 
             <RestaurantDetailComponent 

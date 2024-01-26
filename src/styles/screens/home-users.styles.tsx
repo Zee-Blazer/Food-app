@@ -103,6 +103,9 @@ export const homeUsersScreenStyles = StyleSheet.create({
         marginTop: 20,
         // marginBottom: theme.space[9]
     },
+    boxSpacing2: {
+        marginTop: 5
+    },
     boxShadow: {
         ...Platform.select({
             ios: {

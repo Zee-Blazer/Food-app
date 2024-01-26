@@ -1,0 +1,63 @@
+
+import { View, Text, Image, TouchableOpacity } from "react-native";
+
+// Icons
+import { MaterialIcons } from '@expo/vector-icons';
+
+// Styling
+import { searchUsersStyles } from "../../../styles/screens/serach-users.styles";
+import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
+
+// Components
+import { CategoriesHeaderText } from "../Categories/category-header-text.component";
+import { FastFoodComponent } from "./fast-food.component";
+
+export const FastFoodContainerComponent = () => {
+
+    return (
+        <View>
+            <CategoriesHeaderText 
+                cateName="Popular Fast Food"
+                seeAll={ false }
+            />
+
+            <View style={{ marginTop: 24 }}></View>
+
+            <View 
+                style={[ 
+                    homeUsersScreenStyles.flexDisplay, 
+                    homeUsersScreenStyles.flexDesign,
+                    { flexWrap: "wrap" }
+                ]}
+            >
+
+                <FastFoodComponent 
+                    foodType="European Pizza"
+                    resName="Uttora Coffe House"
+                    amount={ 40 }
+                    imgUri={ require("../../../../assets/Images/Restaurants/resturant1.jpg") }
+                />
+                <FastFoodComponent 
+                    foodType="European Pizza"
+                    resName="Uttora Coffe House"
+                    amount={ 30 }
+                    imgUri={ require("../../../../assets/Images/Restaurants/resturant2.jpg") }
+                />
+                <FastFoodComponent 
+                    foodType="European Pizza"
+                    resName="Uttora Coffe House"
+                    amount={ 45 }
+                    imgUri={ require("../../../../assets/Images/Restaurants/resturant4.jpg") }
+                />
+                <FastFoodComponent 
+                    foodType="European Pizza"
+                    resName="Uttora Coffe House"
+                    amount={ 54 }
+                    imgUri={ require("../../../../assets/Images/Restaurants/resturant3.jpg") }
+                />
+
+            </View>
+            
+        </View>
+    )
+}

@@ -14,9 +14,10 @@ export const CategoryItemContainerComponent = () => {
         <View>
             <CategoriesHeaderText 
                 cateName="All Categories"
+                seeAll={ true }
             />
             <ScrollView 
-                style={[ homeUsersScreenStyles.boxSpacing, homeUsersScreenStyles.innerSpace ]}
+                style={[ homeUsersScreenStyles.boxSpacing, homeUsersScreenStyles.innerSpace ]} 
                 showsHorizontalScrollIndicator={false}
                 horizontal
             >

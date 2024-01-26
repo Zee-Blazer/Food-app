@@ -1,3 +1,4 @@
+import React, { useRef, useEffect } from 'react';
 
 // Icons
 import { AntDesign } from '@expo/vector-icons';
@@ -19,10 +20,20 @@ export const SearchBarContComponent: React.FC<Props> = ({ redirect }) => {
 
     const navigation = useNavigation();
 
+    const textInputRef = useRef<TextInput | null>(null);
+
+    useEffect(() => {
+        // Automatically focus on the TextInput when the component mounts
+        if (textInputRef.current && !redirect) {
+          textInputRef.current.focus();
+        }
+      }, []);
+
     return (
         <View style={ homeUsersScreenStyles.searchBarCont }>
             <AntDesign name="search1" size={15} color="#A0A5BA" />
             <TextInput 
+                ref={textInputRef}
                 placeholder="Search"
                 placeholderTextColor="#676767"
                 style={ homeUsersScreenStyles.searchBarTxt }

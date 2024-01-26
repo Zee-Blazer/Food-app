@@ -1,5 +1,8 @@
 
-import { View, Text, TouchableOpacity, Image } from "react-native"
+import { View, Text, TouchableOpacity, Image } from "react-native";
+
+// Navigation
+import { useNavigation } from "@react-navigation/native";
 
 // Styyling 
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
@@ -12,13 +15,21 @@ interface Props {
     restaurantItems: string,
     imgUri: string,
     rating: string,
-    time: number
+    time: number,
+    link: string
 }
 
-export const RestaurantDetailComponent: React.FC<Props> = ({ restaurantName, restaurantItems, imgUri, rating, time }) => {
+export const RestaurantDetailComponent: React.FC<Props> = ({ 
+    restaurantName, restaurantItems, imgUri, rating, time, link
+}) => {
+
+    const navigation = useNavigation();
 
     return (
-        <TouchableOpacity style={ homeUsersScreenStyles.restaurantCont }>
+        <TouchableOpacity 
+            style={ homeUsersScreenStyles.restaurantCont }
+            onPress={ () => link && navigation.navigate(link) }
+        >
             <Image 
                 source={ imgUri }
                 style={ homeUsersScreenStyles.restaurantImg }

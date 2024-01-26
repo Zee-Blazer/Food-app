@@ -20,6 +20,7 @@ export const RestaurantDetailContainerComponent = () => {
                 imgUri={ require("../../../../assets/Images/Restaurants/resturant1.jpg") }
                 rating="4.7"
                 time={20}
+                link=""
             />
             <RestaurantDetailComponent 
                 restaurantName="Pansi Restaurant"
@@ -27,6 +28,7 @@ export const RestaurantDetailContainerComponent = () => {
                 imgUri={ require("../../../../assets/Images/Restaurants/resturant2.jpg") }
                 rating="3.2"
                 time={30}
+                link=""
             />
             <RestaurantDetailComponent 
                 restaurantName="American Spicy Burger Shop"
@@ -34,6 +36,7 @@ export const RestaurantDetailContainerComponent = () => {
                 imgUri={ require("../../../../assets/Images/Restaurants/resturant3.jpg") }
                 rating="4.9"
                 time={12}
+                link=""
             />
             <RestaurantDetailComponent 
                 restaurantName="Cafenio Coffee Club"
@@ -41,6 +44,7 @@ export const RestaurantDetailContainerComponent = () => {
                 imgUri={ require("../../../../assets/Images/Restaurants/resturant4.jpg") }
                 rating="3.6"
                 time={18}
+                link=""
             />
         </View>
     )

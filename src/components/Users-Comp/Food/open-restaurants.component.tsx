@@ -20,6 +20,7 @@ export const OpenRestaurantscomponent = () => {
                 imgUri={ require("../../../../assets/Images/Restaurants/resturant2.jpg") }
                 rating="3.2"
                 time={30}
+                link="FoodDetails"
             />
         </View>
     )

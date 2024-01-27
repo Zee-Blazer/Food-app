@@ -9,29 +9,34 @@ import { RestaurantViewHeaderComponent } from "../../components/Users-Comp/Heade
 import { RestaurantViewInfoContainer } from "../../components/Users-Comp/Restaurant View/restaurant-view-info-container.component";
 import { FoodOptionContainer } from "../../components/Users-Comp/Restaurant View/food-option-container.component";
 import { PopularMealComponent } from "../../components/Users-Comp/Food/popular-meal.component";
+import { CoverBgContainerComponent } from "../../components/Users-Comp/Restaurant View/cover-bg-container.component";
 
 export const RestaurantViewScreen = () => {
 
     return (
-        <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
-            <View style={ homeUsersScreenStyles.body }>
-                
-                <ScrollView
-                    showsVerticalScrollIndicator={ false }
-                >
-
+        <>
+            <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
+                <View style={ homeUsersScreenStyles.body }>
+                    
                     <RestaurantViewHeaderComponent />
 
-                    <RestaurantViewInfoContainer />
+                    <ScrollView
+                        showsVerticalScrollIndicator={ false }
+                    >
 
-                    <FoodOptionContainer />
+                        <RestaurantViewInfoContainer />
 
-                    <PopularMealComponent 
-                        cateName="Burger (10)"
-                    />
+                        <FoodOptionContainer />
 
-                </ScrollView>
-            </View>
-        </SafeAreaView>
+                        <PopularMealComponent 
+                            cateName="Burger (10)"
+                        />
+
+                    </ScrollView>
+                </View>
+            </SafeAreaView>
+
+            <CoverBgContainerComponent />
+        </>
     )
 }

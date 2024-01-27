@@ -21,7 +21,9 @@ export const FoodScreen = () => {
                     showsVerticalScrollIndicator={ false }
                 >
 
-                    <PopularMealComponent />
+                    <PopularMealComponent 
+                        cateName="Polpular Burgers"
+                    />
 
                     <OpenRestaurantscomponent />
 

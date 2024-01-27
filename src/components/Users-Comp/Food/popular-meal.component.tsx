@@ -8,12 +8,16 @@ import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles
 import { CategoriesHeaderText } from "../Categories/category-header-text.component";
 import { FastFoodComponent } from "../Search/fast-food.component";
 
-export const PopularMealComponent = () => {
+interface Props {
+    cateName: string
+}
+
+export const PopularMealComponent: React.FC<Props> = ({ cateName }) => {
 
     return (
         <View>
             <CategoriesHeaderText 
-                cateName="Polpular Burgers"
+                cateName={ cateName }
                 seeAll={ false }
             />
 

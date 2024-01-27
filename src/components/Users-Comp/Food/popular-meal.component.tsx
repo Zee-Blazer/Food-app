@@ -32,24 +32,28 @@ export const PopularMealComponent = () => {
                     resName="Uttora Coffe House"
                     amount={ 40 }
                     imgUri={ require("../../../../assets/Images/Restaurants/resturant1.jpg") }
+                    link="RestaurantView"
                 />
                 <FastFoodComponent 
                     foodType="European Pizza"
                     resName="Uttora Coffe House"
                     amount={ 30 }
                     imgUri={ require("../../../../assets/Images/Restaurants/resturant2.jpg") }
+                    link="RestaurantView"
                 />
                 <FastFoodComponent 
                     foodType="European Pizza"
                     resName="Uttora Coffe House"
                     amount={ 45 }
                     imgUri={ require("../../../../assets/Images/Restaurants/resturant4.jpg") }
+                    link="RestaurantView"
                 />
                 <FastFoodComponent 
                     foodType="European Pizza"
                     resName="Uttora Coffe House"
                     amount={ 54 }
                     imgUri={ require("../../../../assets/Images/Restaurants/resturant3.jpg") }
+                    link="RestaurantView"
                 />
 
             </View>

@@ -29,5 +29,34 @@ export const foodDetailsUserStyles = StyleSheet.create({
         fontFamily: theme.fonts.body,
         marginTop: 12,
         color: "#181C2E"
+    },
+    sizeTxt: {
+        fontSize: theme.fontSizes.sz,
+        fontFamily: theme.fonts.body,
+        color: "#32343E",
+        marginRight: theme.space[7],
+        marginTop: theme.space[6]
+    },
+    sizeOpt: {
+        // paddingVertical: theme.space[6],
+        // paddingHorizontal: theme.space[5],
+        marginRight: theme.space[4],
+        borderRadius: 50
+    },
+    sizeOptInnerTxt: {
+        paddingVertical: theme.space[6],
+        paddingHorizontal: theme.space[5]
+    },
+    sizeOptInnerTxtColor: {
+        color: "#121223"
+    },
+    sizeOptInnerTxtcolorActive: {
+        color: "white"
+    },
+    sizeOptBg: {
+        backgroundColor: "#F0F5FA",
+    },
+    sizeOptBgActive: {
+        backgroundColor: "#F58D1D",
     }
 });

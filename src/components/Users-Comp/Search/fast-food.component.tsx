@@ -1,6 +1,9 @@
 
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 
+// Navigation
+import { useNavigation } from '@react-navigation/native';
+
 // Icons
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -12,13 +15,16 @@ interface Props {
     resName: string,
     foodType: string,
     imgUri: string,
-    amount: number
+    amount: number,
+    link: string
 }
 
-export const FastFoodComponent: React.FC<Props> = ({ resName, foodType, imgUri, amount }) => {
+export const FastFoodComponent: React.FC<Props> = ({ resName, foodType, imgUri, amount, link }) => {
+
+    const navigation = useNavigation();
 
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={ () => link && navigation.navigate(link) }>
             <Image 
                 source={ imgUri }
                 style={ searchUsersStyles.foodPackImg }

@@ -12,7 +12,11 @@ import { useNavigation } from "@react-navigation/native";
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
 import { searchUsersStyles } from "../../../styles/screens/serach-users.styles";
 
-export const RestaurantViewHeaderComponent = () => {
+interface Props {
+    func: () => void
+}
+
+export const RestaurantViewHeaderComponent: React.FC<Props> = ({ func }) => {
 
     const navigation = useNavigation();
 
@@ -39,7 +43,7 @@ export const RestaurantViewHeaderComponent = () => {
                 </Text>
             </View>
 
-            <TouchableOpacity style={ searchUsersStyles.backNavOpt }>
+            <TouchableOpacity style={ searchUsersStyles.backNavOpt } onPress={ func }>
                 <SimpleLineIcons 
                     name="options" size={22} color="#181C2E" 
                     style={{ marginTop: 8, marginLeft: 8 }} 

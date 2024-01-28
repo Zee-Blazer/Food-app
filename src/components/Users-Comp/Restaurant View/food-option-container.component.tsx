@@ -11,7 +11,7 @@ export const FoodOptionContainer = () => {
 
     return (
         <ScrollView 
-            style={[ { marginTop: 18, maxHeight: 50 } ]}
+            style={[ { marginTop: 12, maxHeight: 50 } ]}
             horizontal
             showsHorizontalScrollIndicator={ false }
         >

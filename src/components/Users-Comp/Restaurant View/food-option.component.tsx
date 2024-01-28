@@ -20,7 +20,7 @@ export const FoodOptionComponent: React.FC<Props> = ({ itemName, active }) => {
                 !active ? searchUsersStyles.searchKeyWordCont : 
                 { backgroundColor: "#F58D1D", marginRight: 10, borderRadius: 33, },
                 foodUserStyles.optionHighlight,
-                { paddingBottom: 12 }
+                { paddingBottom: 12, marginTop: 6 }
             ]}
         >
             <Text style={[ foodDetailsUserStyles.resTextCheff, { fontSize: 16 }, active && { color: "white" } ]}>

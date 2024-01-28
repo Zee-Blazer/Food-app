@@ -58,5 +58,11 @@ export const foodDetailsUserStyles = StyleSheet.create({
     },
     sizeOptBgActive: {
         backgroundColor: "#F58D1D",
+    },
+    ingridentTxt: {
+        fontFamily: theme.fonts.caption,
+        fontSize: 12,
+        marginTop: 5,
+        textAlign: 'center'
     }
 });

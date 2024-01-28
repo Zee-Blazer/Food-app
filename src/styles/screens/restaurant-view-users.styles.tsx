@@ -39,4 +39,12 @@ export const restaurantViewUsersStyles = StyleSheet.create({
         marginTop: 8,
         marginLeft: theme.space[6]
     },
+    littleOptHeaderTxt: {
+        fontSize: 13,
+        fontFamily: theme.fonts.body
+    },
+    uniqueCont: {
+        marginTop: 20,
+        padding: theme.space[6]
+    }
 });

@@ -9,7 +9,7 @@ export const FoodSizeComponent = () => {
 
     return (
         <View style={[ homeUsersScreenStyles.flexDisplay, { marginTop: 10 } ]}>
-            <Text style={ foodDetailsUserStyles.sizeTxt }>Size:</Text>
+            <Text style={ foodDetailsUserStyles.sizeTxt }>SIZE:</Text>
 
             <TouchableOpacity 
                 style={[ 

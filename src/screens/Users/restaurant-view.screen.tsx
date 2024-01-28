@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
 
@@ -11,14 +12,20 @@ import { FoodOptionContainer } from "../../components/Users-Comp/Restaurant View
 import { PopularMealComponent } from "../../components/Users-Comp/Food/popular-meal.component";
 import { CoverBgContainerComponent } from "../../components/Users-Comp/Restaurant View/cover-bg-container.component";
 
-export const RestaurantViewScreen = () => {
+export const RestaurantViewScreen: React.FC = () => {
+
+    const [showCover, setShowCover] = useState<boolean>(false);
+
+    const showFilter = () => setShowCover(!showCover);
 
     return (
         <>
             <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
                 <View style={ homeUsersScreenStyles.body }>
                     
-                    <RestaurantViewHeaderComponent />
+                    <RestaurantViewHeaderComponent 
+                        func={ showFilter }
+                    />
 
                     <ScrollView
                         showsVerticalScrollIndicator={ false }
@@ -36,7 +43,9 @@ export const RestaurantViewScreen = () => {
                 </View>
             </SafeAreaView>
 
-            <CoverBgContainerComponent />
+            {
+                showCover && <CoverBgContainerComponent func={ showFilter } />
+            }
         </>
     )
 }

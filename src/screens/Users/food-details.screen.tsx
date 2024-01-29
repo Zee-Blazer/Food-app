@@ -1,6 +1,9 @@
 
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
 
+// Navigation
+import { useNavigation } from "@react-navigation/native";
+
 // Styling
 import { homeUsersScreenStyles } from "../../styles/screens/home-users.styles";
 
@@ -12,6 +15,8 @@ import { FoodIngridentComponent } from "../../components/Users-Comp/Food Details
 import { FormBtnComponent } from "../../components/Auth-Comp/form-btn.component";
 
 export const FoodDetailsScreen = () => {
+
+    const navigation = useNavigation();
 
     return (
         <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
@@ -30,7 +35,7 @@ export const FoodDetailsScreen = () => {
 
                     <FormBtnComponent 
                         title="ADD TO CART"
-                        func={ () => console.log("It's working fine") }
+                        func={ () => navigation.navigate("UsersCart") }
                     />
                     
                 </ScrollView>

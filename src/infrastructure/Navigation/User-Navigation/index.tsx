@@ -9,6 +9,7 @@ import { SearchScreen } from "../../../screens/Users/search.screen";
 import { FoodScreen } from "../../../screens/Users/food.screen";
 import { FoodDetailsScreen } from "../../../screens/Users/food-details.screen";
 import { RestaurantViewScreen } from "../../../screens/Users/restaurant-view.screen";
+import { UsersCartScreen } from "../../../screens/Users/users-cart.screen";
 
 const UsersStack = createStackNavigator();
 
@@ -26,6 +27,7 @@ export const UsersNavigation = () => {
             <UsersStack.Screen name="Food" component={ FoodScreen } />
             <UsersStack.Screen name="FoodDetails" component={ FoodDetailsScreen } />
             <UsersStack.Screen name="RestaurantView" component={ RestaurantViewScreen } />
+            <UsersStack.Screen name="UsersCart" component={ UsersCartScreen } />
         </UsersStack.Navigator>
     )
 }

@@ -22,7 +22,9 @@ export const FoodDetailsScreen = () => {
         <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
             <View style={ homeUsersScreenStyles.body }>
 
-                <FoodDetailsHeaderComponent />
+                <FoodDetailsHeaderComponent 
+                    screen="Details"
+                />
 
                 <ScrollView
                     showsVerticalScrollIndicator={ false }

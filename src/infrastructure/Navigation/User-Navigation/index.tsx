@@ -10,6 +10,7 @@ import { FoodScreen } from "../../../screens/Users/food.screen";
 import { FoodDetailsScreen } from "../../../screens/Users/food-details.screen";
 import { RestaurantViewScreen } from "../../../screens/Users/restaurant-view.screen";
 import { UsersCartScreen } from "../../../screens/Users/users-cart.screen";
+import { PaymentScreen } from "../../../screens/Users/payment.screen";
 
 const UsersStack = createStackNavigator();
 
@@ -28,6 +29,7 @@ export const UsersNavigation = () => {
             <UsersStack.Screen name="FoodDetails" component={ FoodDetailsScreen } />
             <UsersStack.Screen name="RestaurantView" component={ RestaurantViewScreen } />
             <UsersStack.Screen name="UsersCart" component={ UsersCartScreen } />
+            <UsersStack.Screen name="Payment" component={ PaymentScreen } />
         </UsersStack.Navigator>
     )
 }

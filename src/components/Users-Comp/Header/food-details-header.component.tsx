@@ -11,7 +11,11 @@ import { useNavigation } from "@react-navigation/native";
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
 import { searchUsersStyles } from "../../../styles/screens/serach-users.styles";
 
-export const FoodDetailsHeaderComponent = () => {
+interface Props {
+    screen: string
+}
+
+export const FoodDetailsHeaderComponent: React.FC<Props> = ({ screen }) => {
 
     const navigation = useNavigation();
 
@@ -34,7 +38,7 @@ export const FoodDetailsHeaderComponent = () => {
                     />
                 </TouchableOpacity>
                 <Text style={ searchUsersStyles.serachHeaderTxt }>
-                    Details
+                    { screen }
                 </Text>
             </View>
         </View>

@@ -45,7 +45,7 @@ export const PaymentScreen: React.FC = () => {
                 </View>
                 <FormBtnComponent 
                     title="PAY & CONFIRM"
-                    func={ () => {} }
+                    func={ () => navigation.navigate("Success") }
                 />
             </View>
         </SafeAreaView>

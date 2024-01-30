@@ -13,5 +13,15 @@ export const addCartUsersStyles = StyleSheet.create({
         fontFamily: theme.fonts.body,
         marginBottom: 8,
         color: "#A0A5BA"
+    },
+    formInputField: {
+        backgroundColor: "#F0F5FA",
+        paddingVertical: 21,
+        paddingHorizontal: 20,
+        borderRadius: 10,
+        color: "#32343E"
+    },
+    miniFormInputField: {
+        width: 150
     }
 });

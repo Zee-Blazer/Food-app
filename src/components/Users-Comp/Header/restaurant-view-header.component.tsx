@@ -13,10 +13,11 @@ import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles
 import { searchUsersStyles } from "../../../styles/screens/serach-users.styles";
 
 interface Props {
+    title: string
     func: () => void
 }
 
-export const RestaurantViewHeaderComponent: React.FC<Props> = ({ func }) => {
+export const RestaurantViewHeaderComponent: React.FC<Props> = ({ title, func }) => {
 
     const navigation = useNavigation();
 
@@ -39,11 +40,14 @@ export const RestaurantViewHeaderComponent: React.FC<Props> = ({ func }) => {
                     />
                 </TouchableOpacity>
                 <Text style={ searchUsersStyles.serachHeaderTxt }>
-                    Restaurant View
+                    { title }
                 </Text>
             </View>
 
-            <TouchableOpacity style={ searchUsersStyles.backNavOpt } onPress={ func }>
+            <TouchableOpacity 
+                style={[ searchUsersStyles.backNavOpt, { marginTop: 2, } ]} 
+                onPress={ func }
+            >
                 <SimpleLineIcons 
                     name="options" size={22} color="#181C2E" 
                     style={{ marginTop: 8, marginLeft: 8 }} 

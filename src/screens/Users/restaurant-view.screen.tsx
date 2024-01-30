@@ -24,6 +24,7 @@ export const RestaurantViewScreen: React.FC = () => {
                 <View style={ homeUsersScreenStyles.body }>
                     
                     <RestaurantViewHeaderComponent 
+                        title="Restaurant View"
                         func={ showFilter }
                     />
 

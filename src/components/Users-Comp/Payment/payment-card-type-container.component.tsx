@@ -7,6 +7,7 @@ import { paymentUsersStyles } from "../../../styles/screens/payment-users.styles
 // Component
 import { CardTypeComponent } from "./card-type.component";
 import { NoCardComponent } from "./no-card.component";
+import { PresentCardComponent } from "./present-card.component";
 
 export const PaymentCardTypeContainerComponent = () => {
 
@@ -39,7 +40,9 @@ export const PaymentCardTypeContainerComponent = () => {
 
             </ScrollView>
 
-            <NoCardComponent />
+            {/* <NoCardComponent /> */}
+
+            <PresentCardComponent />
 
             {/* <Text>Payment Card Type Component</Text> */}
         </View>

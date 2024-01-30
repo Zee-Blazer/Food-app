@@ -24,6 +24,7 @@ export const FoodDetailsScreen = () => {
 
                 <FoodDetailsHeaderComponent 
                     screen="Details"
+                    icon={ true }
                 />
 
                 <ScrollView

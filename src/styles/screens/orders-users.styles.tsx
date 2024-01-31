@@ -32,5 +32,27 @@ export const ordersUserStyles = StyleSheet.create({
     activeNav: {
         borderBottomColor: "#FF7622",
         borderBottomWidth: 1
+    },
+    orderListItemImg: {
+        width: 60,
+        height: 60,
+        borderRadius: 8,
+        marginRight: 14
+    },
+    orderTagTxtStatus: {
+        fontSize: 14,
+        fontFamily: theme.fonts.body,
+        color: "#181C2E"
+    },
+    orderTagTxtStatusColor: {
+        color: "#059C6A",
+        fontFamily: theme.fonts.title,
+        marginLeft: 28
+    },
+    orderTagTxtStatusCont: {
+        paddingBottom: 16,
+        borderBottomWidth: 1,
+        borderColor: "#EEF2F6",
+        marginBottom: 16
     }
 });

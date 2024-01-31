@@ -19,7 +19,6 @@ export const OrdersScreen = () => {
                 />
 
                 <OrdersMainContainerComponent />
-                <Text>Orders Screen</Text>
             </View>
         </SafeAreaView>
     )

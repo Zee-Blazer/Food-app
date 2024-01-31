@@ -5,36 +5,50 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
 import { ordersUserStyles } from "../../../styles/screens/orders-users.styles";
 
-export const HeaderNavComponent = () => {
+interface Props {
+    func: (e: string) => void,
+    view: string
+}
+
+export const HeaderNavComponent: React.FC<Props> = ({ func, view }) => {
 
     return (
         <View style={[ homeUsersScreenStyles.flexDisplay, ordersUserStyles.navHeader ]}>
             <TouchableOpacity 
-                style={[ 
-                    // ordersUserStyles.activeNav, 
-                    ordersUserStyles.navItems 
-                ]}
+                style={
+                    view === "Ongoing" ? 
+                        [ordersUserStyles.activeNav, ordersUserStyles.navItems]
+                    :
+                        ordersUserStyles.navItems 
+                }
+                onPress={ () => func("Ongoing") }
             >
                 <Text 
-                    style={[ 
-                        // ordersUserStyles.activeNavTxt,
-                        ordersUserStyles.inactiveNavTxt 
-                    ]}
+                    style={
+                        view === "Ongoing" ? 
+                            ordersUserStyles.activeNavTxt
+                        :
+                            ordersUserStyles.inactiveNavTxt 
+                    }
                 >Ongoing</Text>
             </TouchableOpacity>
             
             <TouchableOpacity
-                style={[
-                    ordersUserStyles.activeNav, 
-                    ordersUserStyles.navItems,
-                    // ordersUserStyles.navItems
-                ]}
+                style={
+                    view === "History" ? 
+                        [ordersUserStyles.activeNav, ordersUserStyles.navItems]
+                    :
+                        ordersUserStyles.navItems 
+                }
+                onPress={ () => func("History") }
             >
                 <Text 
-                    style={[ 
-                        ordersUserStyles.activeNavTxt,
-                        // ordersUserStyles.inactiveNavTxt 
-                    ]}
+                    style={
+                        view === "History" ? 
+                            ordersUserStyles.activeNavTxt
+                        :
+                            ordersUserStyles.inactiveNavTxt 
+                    }
                 >History</Text>
             </TouchableOpacity>
         </View>

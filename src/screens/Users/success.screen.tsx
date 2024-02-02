@@ -17,7 +17,7 @@ import { FormBtnComponent } from "../../components/Auth-Comp/form-btn.component"
 
 export const SuccessScreen: React.FC = () => {
 
-    const navigation = useNavigation();
+    const navigation = useNavigation();  // The navigation instance
 
     return (
         <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>

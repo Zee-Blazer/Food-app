@@ -54,5 +54,42 @@ export const ordersUserStyles = StyleSheet.create({
         borderBottomWidth: 1,
         borderColor: "#EEF2F6",
         marginBottom: 16
+    },
+    orderItemcomp: {
+        marginTop: 32
+    },
+    orderBoldTxt: {
+        fontSize: 14,
+        fontFamily: theme.fonts.title,
+        color: "#181C2E"
+    },
+    highlightCode: {
+        color: "#6B6E82",
+        fontSize: 14,
+        fontFamily: theme.fonts.body
+    },
+    borderRightTxt: {
+        color: "#CACCDA",
+        paddingHorizontal: 14,
+    },
+    orderDetailsCont: {
+        marginTop: 12
+    },
+    orderItemBtn: {
+        marginTop: 24,
+        paddingVertical: 12,
+        paddingHorizontal: 56,
+        borderRadius: 8
+    },
+    orderItemBtnRight: {
+        backgroundColor: "#FF7622",
+    },
+    orderItemBtnLeft: {
+        borderWidth: 1,
+        borderColor: "#FF7622"
+    },
+    formTxtBtn: {
+        fontSize: 12,
+        fontFamily: theme.fonts.title
     }
 });

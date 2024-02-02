@@ -1,63 +1,53 @@
 
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
-// Styling 
-import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
-import { ordersUserStyles } from "../../../styles/screens/orders-users.styles";
+// Component
+import { OrderItemComponent } from "./order-item.component";
 
 export const HistorySectionComponent = () => {
 
     return (
         <View>
-            <View 
-                style={[ 
-                    homeUsersScreenStyles.flexDisplay, 
-                    ordersUserStyles.orderTagTxtStatusCont 
-                ]}
-            >
-                <Text style={[ ordersUserStyles.orderTagTxtStatus ]}>
-                    Food
-                </Text>
-                <Text 
-                    style={[ 
-                        ordersUserStyles.orderTagTxtStatus, 
-                        ordersUserStyles.orderTagTxtStatusColor 
-                    ]}
-                >Completed</Text>
-            </View>
-            <View style={[ homeUsersScreenStyles.flexDisplay,  ]}>
-                <Image 
-                    source={ require('../../../../assets/Images/Pizza/pizza1.jpg') }
-                    style={ ordersUserStyles.orderListItemImg }
-                />
-
-                <View>
-                    <View 
-                        style={[ 
-                            homeUsersScreenStyles.flexDisplay, 
-                            homeUsersScreenStyles.flexDesign 
-                        ]}
-                    >
-                        <Text>Pizza Hut</Text>
-                        <Text>#162432</Text>
-                    </View>
-
-                    <View>
-                        <Text>$35.25</Text>
-                        <Text></Text>
-                    </View>
-                </View>
-
-                <View>
-                    <TouchableOpacity>
-                        <Text>Rate</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                        <Text>Re-Order</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
+            <OrderItemComponent 
+                type="Food"
+                resName="Pizza Hut"
+                completed={ true }
+                amount={32.25}
+                details="29 JAN, 12:30 . 03 Items"
+                status="Completed"
+            />
+            <OrderItemComponent 
+                type="Drink"
+                resName="Pizza Hut"
+                completed={ true }
+                amount={32.25}
+                details="29 JAN, 12:30 . 03 Items"
+                status="Completed"
+            />
+            <OrderItemComponent 
+                type="Drink"
+                resName="Pizza Hut"
+                completed={ true }
+                amount={32.25}
+                details="29 JAN, 12:30 . 03 Items"
+                status="Canceled"
+            />
+            <OrderItemComponent 
+                type="Drink"
+                resName="Pizza Hut"
+                completed={ true }
+                amount={32.25}
+                details="29 JAN, 12:30 . 03 Items"
+                status="Canceled"
+            />
+            <OrderItemComponent 
+                type="Drink"
+                resName="Pizza Hut"
+                completed={ true }
+                amount={32.25}
+                details="29 JAN, 12:30 . 03 Items"
+                status="Canceled"
+            />
         </View>
     )
 }

@@ -1,10 +1,15 @@
 
 import { View, SafeAreaView, TouchableOpacity, Text, Image } from "react-native";
 
+// Navigation
+import { useNavigation } from "@react-navigation/native";
+
 // Theme
 import { theme } from "../../Theme";
 
 export const ProfileStyledComponent = () => {
+
+    const navigation = useNavigation();
 
     return (
         <SafeAreaView>
@@ -13,6 +18,7 @@ export const ProfileStyledComponent = () => {
                     height: 200,
                     alignItems: "center"
                 }}
+                onPress={ () => navigation.navigate("Profile") }
             >
                 <Image 
                     source={ require('../../../../assets/Images/Profile/profile2.jpg') }

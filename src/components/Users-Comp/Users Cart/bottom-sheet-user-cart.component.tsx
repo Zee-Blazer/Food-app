@@ -4,6 +4,9 @@ import { View, Text, TouchableOpacity, TextInput } from "react-native";
 // Icon
 import { AntDesign } from '@expo/vector-icons';
 
+// Navigation
+import { useNavigation } from "@react-navigation/native";
+
 // Styling
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
 import { addCartUsersStyles } from "../../../styles/screens/add-cart-users.styles";
@@ -14,6 +17,8 @@ import { paymentUsersStyles } from "../../../styles/screens/payment-users.styles
 import { FormBtnComponent } from "../../Auth-Comp/form-btn.component";
 
 export const BottomSheetUserCartComponent = () => {
+
+    const navigation = useNavigation();
 
     return (
         <View>
@@ -59,7 +64,7 @@ export const BottomSheetUserCartComponent = () => {
             <View style={{ marginTop: 24 }}>
                 <FormBtnComponent 
                     title="PLACE ORDER"
-                    func={ () => {} }
+                    func={ () => navigation.navigate("Payment") }
                 />
             </View>
         </View>

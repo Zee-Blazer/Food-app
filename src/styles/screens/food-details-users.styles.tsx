@@ -64,5 +64,23 @@ export const foodDetailsUserStyles = StyleSheet.create({
         fontSize: 12,
         marginTop: 5,
         textAlign: 'center'
+    },
+    bottomSheetAmountTxt: {
+        fontSize: 28,
+        color: "#181C2E",
+        fontFamily: theme.fonts.body
+    },
+    bottomSheetAmountCont: {
+        backgroundColor: "#121223",
+        borderRadius: 50,
+        paddingVertical: 12,
+        paddingHorizontal: 14
+    },
+    bottomSheetAmountNumTxt: {
+        fontSize: 16,
+        fontFamily: theme.fonts.title,
+        color: "#FFFFFF",
+        marginHorizontal: 20,
+        marginTop: 2
     }
 });

@@ -1,9 +1,6 @@
 import React, { useMemo, useState, useRef } from "react";
 
-import { View, Text, SafeAreaView, ScrollView } from "react-native";
-
-// Navigation
-import { useNavigation } from "@react-navigation/native";
+import { View, SafeAreaView, ScrollView } from "react-native";
 
 // Bottom Sheet
 import BottomSheet from '@gorhom/bottom-sheet';
@@ -17,16 +14,15 @@ import { FoodDetailContainerComponent } from "../../components/Users-Comp/Food D
 import { FoodSizeComponent } from "../../components/Users-Comp/Food Details/food-sizes.component";
 import { FoodIngridentComponent } from "../../components/Users-Comp/Food Details/food-ingridents.component";
 import { FormBtnComponent } from "../../components/Auth-Comp/form-btn.component";
+import { BottomSheetCartComponent } from "../../components/Users-Comp/Food Details/bottom-sheet-cart.component";
 
 export const FoodDetailsScreen = () => {
 
-    const navigation = useNavigation();
-
-    const snapPoints = useMemo( () => ["25%", "50%", "70%"], [] );
+    const snapPoints = useMemo( () => ["25%"], [] );
     const bottomSheetRef = useRef<BottomSheet>(null);
 
     const [showBottomSheet, setShowBottomSheet] = useState<boolean>(false);
-    
+
     const snapToIndex = (index: number) => bottomSheetRef.current?.snapToIndex(index);
 
     return (
@@ -58,20 +54,18 @@ export const FoodDetailsScreen = () => {
                     
                 </ScrollView>
 
-                {
-                    showBottomSheet &&
-                    <BottomSheet 
-                        snapPoints={ snapPoints } 
-                        enablePanDownToClose
-                        ref={ bottomSheetRef }
-                    >
-                        <View>
-                            <Text>This is the bottom sheet</Text>
-                        </View>
-                    </BottomSheet>
-                }
-
             </View>
+            {
+                showBottomSheet &&
+                <BottomSheet 
+                    snapPoints={ snapPoints } 
+                    enablePanDownToClose
+                    ref={ bottomSheetRef }
+                    backgroundStyle={{ backgroundColor: "#F0F5FA" }}
+                >
+                    <BottomSheetCartComponent />
+                </BottomSheet>
+            }
         </SafeAreaView>
     )
 }

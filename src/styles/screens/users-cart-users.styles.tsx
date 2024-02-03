@@ -52,5 +52,10 @@ export const usersCartUsersStyles = StyleSheet.create({
         fontFamily: theme.fonts.title,
         color: "white",
         marginHorizontal: 12
+    },
+    colorBottomSheetTxt: {
+        color: "#FF7622",
+        fontSize: 14,
+        fontFamily: theme.fonts.body
     }
 });

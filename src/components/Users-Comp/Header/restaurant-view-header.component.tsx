@@ -45,7 +45,7 @@ export const RestaurantViewHeaderComponent: React.FC<Props> = ({ title, func }) 
             </View>
 
             <TouchableOpacity 
-                style={[ searchUsersStyles.backNavOpt, { marginTop: 2, } ]} 
+                style={[ searchUsersStyles.backNavOpt, { marginTop: 2, marginRight: 2 } ]} 
                 onPress={ func }
             >
                 <SimpleLineIcons 

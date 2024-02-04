@@ -1,5 +1,5 @@
 
-import { View, SafeAreaView, Text } from "react-native";
+import { View, SafeAreaView, ScrollView } from "react-native";
 
 // Styling 
 import { homeUsersScreenStyles } from "../../styles/screens/home-users.styles";
@@ -20,9 +20,13 @@ export const ProfileScreen = () => {
                     func={ () => {} }
                 />
 
-                <ProfileDetailsComponent />
+                <ScrollView
+                    showsVerticalScrollIndicator={ false }
+                >
+                    <ProfileDetailsComponent />
 
-                <ProfileActionComponent />
+                    <ProfileActionComponent />
+                </ScrollView>
 
             </View>
         </SafeAreaView>

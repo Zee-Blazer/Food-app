@@ -1,5 +1,5 @@
 
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity, FlatList } from "react-native";
 
 // Icon
 import { AntDesign } from '@expo/vector-icons';
@@ -8,49 +8,47 @@ import { AntDesign } from '@expo/vector-icons';
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
 import { profileUsersStyles } from "../../../styles/screens/profile-users.styles";
 
-export const ProfileActionContainerComponent = () => {
+interface data {
+    iconUri: string,
+    title: string,
+    link: string
+}
+
+interface Props {
+    data: data[]
+}
+
+export const ProfileActionContainerComponent: React.FC<Props> = ({ data }) => {
 
     return (
         <View style={[ profileUsersStyles.profileActionCont ]}>
-            <TouchableOpacity 
-                style={[ 
-                    homeUsersScreenStyles.flexDisplay,
-                    homeUsersScreenStyles.flexDesign,
-                    { marginBottom: 16 }
-                ]}
-            >
-                <View style={[ homeUsersScreenStyles.flexDisplay, { alignItems: "center" } ]}>
-                    <Image 
-                        source={ require('../../../../assets/Images/Icons/profile.png') }
-                        style={{ marginTop: -4 }}
-                    />
-                    <Text style={ profileUsersStyles.profileActionContTxt }>Profile Info</Text>
-                </View>
-                <AntDesign 
-                    name="right" size={16} color="#181C2E" 
-                    style={{ marginTop: 6, marginLeft: 4 }} 
-                />
-            </TouchableOpacity>
 
-            <TouchableOpacity 
-                style={[ 
-                    homeUsersScreenStyles.flexDisplay,
-                    homeUsersScreenStyles.flexDesign,
-                    { marginBottom: 16 }
-                ]}
-            >
-                <View style={[ homeUsersScreenStyles.flexDisplay, { alignItems: "center" } ]}>
-                    <Image 
-                        source={ require('../../../../assets/Images/Icons/address.png') }
-                        style={{ marginTop: -4 }}
-                    />
-                    <Text style={ profileUsersStyles.profileActionContTxt }>Addresses</Text>
-                </View>
-                <AntDesign 
-                    name="right" size={16} color="#181C2E" 
-                    style={{ marginTop: 6, marginLeft: 4 }} 
-                />
-            </TouchableOpacity>
+            <FlatList 
+                data={ data }
+                renderItem={ ({ item }) => (
+                    <TouchableOpacity 
+                        style={[ 
+                            homeUsersScreenStyles.flexDisplay,
+                            homeUsersScreenStyles.flexDesign,
+                            { marginBottom: 16 }
+                        ]}
+                    >
+                        <View style={[ homeUsersScreenStyles.flexDisplay, { alignItems: "center" } ]}>
+                            <Image 
+                                source={ item.iconUri }
+                                style={{ marginTop: -4 }}
+                            />
+                            <Text style={ profileUsersStyles.profileActionContTxt }>{ item.title }</Text>
+                        </View>
+                        <AntDesign 
+                            name="right" size={16} color="#181C2E" 
+                            style={{ marginTop: 6, marginLeft: 4 }} 
+                        />
+                    </TouchableOpacity>
+                ) }
+                keyExtractor={ item => item.iconUri }
+            />
+
         </View>
     )
 }

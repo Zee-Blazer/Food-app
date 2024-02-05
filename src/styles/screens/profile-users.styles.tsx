@@ -39,5 +39,16 @@ export const profileUsersStyles = StyleSheet.create({
         fontFamily: theme.fonts.body,
         color: "#32343E",
         marginLeft: 14
+    },
+    infoActionContTxt: {
+        fontSize: 14,
+        fontFamily: theme.fonts.body,
+        color: "#32343E",
+        marginTop: -2
+    },
+    infoActionContSubTxt: {
+        fontSize: 14,
+        fontFamily: theme.fonts.body,
+        color: "#6B6E82"
     }
 });

@@ -7,6 +7,7 @@ import { homeUsersScreenStyles } from "../../styles/screens/home-users.styles";
 // Component
 import { UsersCartHeaderComponent } from "../../components/Users-Comp/Header/users-cart-header.component";
 import { ProfileDetailsComponent } from "../../components/Users-Comp/Profile Section/profile-details.component";
+import { InfoDisplayComponent } from "../../components/Users-Comp/Profile Info/info-display.component";
 
 export const ProfileInfoScreen = () => {
 
@@ -20,6 +21,8 @@ export const ProfileInfoScreen = () => {
                 />
 
                 <ProfileDetailsComponent />
+
+                <InfoDisplayComponent />
             </View>
         </SafeAreaView>
     )

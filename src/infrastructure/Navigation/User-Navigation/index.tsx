@@ -16,6 +16,7 @@ import { SuccessScreen } from "../../../screens/Users/success.screen";
 import { OrdersScreen } from "../../../screens/Users/orders.screen";
 import { ProfileScreen } from "../../../screens/Users/profile.screen";
 import { ProfileInfoScreen } from "../../../screens/Users/profile-info.screen";
+import { AddressUsersScreen } from "../../../screens/Users/address.users.screen";
 
 const UsersStack = createStackNavigator();
 
@@ -40,6 +41,7 @@ export const UsersNavigation = () => {
             <UsersStack.Screen name="Orders" component={ OrdersScreen } />
             <UsersStack.Screen name="Profile" component={ ProfileScreen } />
             <UsersStack.Screen name="ProfileInfo" component={ ProfileInfoScreen } />
+            <UsersStack.Screen name="Address" component={ AddressUsersScreen } />
         </UsersStack.Navigator>
     )
 }

@@ -12,7 +12,13 @@ import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles
 import { searchUsersStyles } from "../../../styles/screens/serach-users.styles";
 import { usersCartUsersStyles } from "../../../styles/screens/users-cart-users.styles";
 
-export const UsersCartHeaderComponent = () => {
+interface Props {
+    title: string,
+    screenType: string,
+    action?: boolean
+}
+
+export const UsersCartHeaderComponent: React.FC<Props> = ({ title, screenType, action }) => {
 
     const navigation = useNavigation();
 
@@ -27,21 +33,30 @@ export const UsersCartHeaderComponent = () => {
             <View style={[ homeUsersScreenStyles.flexDisplay ]}>
                 <TouchableOpacity 
                     onPress={ () => navigation.goBack() }
-                    style={[ searchUsersStyles.backNavOpt, { backgroundColor: "rgba(255,255,255,0.2)" } ]}
+                    style={[ 
+                        searchUsersStyles.backNavOpt, 
+                        { backgroundColor: screenType == "Cart" ? "rgba(255,255,255,0.2)" : "#ECF0F4" } 
+                    ]}
                 >
                     <Ionicons 
-                        name="chevron-back-sharp" size={22} color="#FFFFFF" 
-                        style={{ marginTop: 8, marginLeft: 8 }} 
+                        name="chevron-back-sharp" size={22} 
+                        color={ screenType == "Cart" ? "#FFFFFF" : "#181C2E" } 
+                        style={{ marginTop: 6, marginLeft: 8 }} 
                     />
                 </TouchableOpacity>
-                <Text style={[ searchUsersStyles.serachHeaderTxt, { color: "white" } ]}>
-                    Cart
+                <Text 
+                    style={[ 
+                        searchUsersStyles.serachHeaderTxt, 
+                        { color: screenType == "Cart" ? "white" : "#181C2E" } 
+                    ]}
+                >
+                    { title }
                 </Text>
             </View>
 
             <TouchableOpacity>
                 <Text style={[ usersCartUsersStyles.upperEditTxt, { color: "#FF7622" } ]}>
-                    EDIT ITEMS
+                    { screenType == "Cart" ?  "EDIT ITEMS" : "EDIT" }
                 </Text>
                 {/* <Text style={[ usersCartUsersStyles.upperEditTxt, { color: "#059C6A" } ]}>
                     DONE

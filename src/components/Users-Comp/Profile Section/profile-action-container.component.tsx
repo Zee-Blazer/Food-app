@@ -4,6 +4,9 @@ import { View, Text, Image, TouchableOpacity, FlatList } from "react-native";
 // Icon
 import { AntDesign } from '@expo/vector-icons';
 
+// Navigation
+import { useNavigation } from "@react-navigation/native";
+
 // Styling
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
 import { profileUsersStyles } from "../../../styles/screens/profile-users.styles";
@@ -20,6 +23,14 @@ interface Props {
 
 export const ProfileActionContainerComponent: React.FC<Props> = ({ data }) => {
 
+    const navigation = useNavigation();
+
+    const moveToScreen = (e: string) => {
+        if(e.length > 1){
+            navigation.navigate(e);
+        }
+    }
+
     return (
         <View style={[ profileUsersStyles.profileActionCont ]}>
 
@@ -32,6 +43,7 @@ export const ProfileActionContainerComponent: React.FC<Props> = ({ data }) => {
                             homeUsersScreenStyles.flexDesign,
                             { marginBottom: 16 }
                         ]}
+                        onPress={ () => moveToScreen(item.link) }
                     >
                         <View style={[ homeUsersScreenStyles.flexDisplay, { alignItems: "center" } ]}>
                             <Image 

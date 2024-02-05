@@ -7,7 +7,7 @@ import { ProfileActionContainerComponent } from "./profile-action-container.comp
 export const ProfileActionComponent = () => {
 
     const data1 = [
-        { iconUri: require("../../../../assets/Images/Icons/profile.png"), title: "Personal Info", link: "" },
+        { iconUri: require("../../../../assets/Images/Icons/profile.png"), title: "Personal Info", link: "ProfileInfo" },
         { iconUri: require("../../../../assets/Images/Icons/address.png"), title: "Addresses", link: "" }
     ];
 

@@ -32,7 +32,11 @@ export const UsersCartScreen = () => {
         <SafeAreaView style={{ backgroundColor: "#121223", flex: 1 }}>
             <View style={ usersCartUsersStyles.body }>
 
-                <UsersCartHeaderComponent />
+                <UsersCartHeaderComponent 
+                    title="Cart"
+                    screenType='Cart'
+                    action={ false }
+                />
 
                 <View style={{ marginVertical: 12 }}></View>
                 

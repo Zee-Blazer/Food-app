@@ -15,6 +15,7 @@ import { AddCardScreen } from "../../../screens/Users/add-card.screen";
 import { SuccessScreen } from "../../../screens/Users/success.screen";
 import { OrdersScreen } from "../../../screens/Users/orders.screen";
 import { ProfileScreen } from "../../../screens/Users/profile.screen";
+import { ProfileInfoScreen } from "../../../screens/Users/profile-info.screen";
 
 const UsersStack = createStackNavigator();
 
@@ -38,6 +39,7 @@ export const UsersNavigation = () => {
             <UsersStack.Screen name="Success" component={ SuccessScreen } />
             <UsersStack.Screen name="Orders" component={ OrdersScreen } />
             <UsersStack.Screen name="Profile" component={ ProfileScreen } />
+            <UsersStack.Screen name="ProfileInfo" component={ ProfileInfoScreen } />
         </UsersStack.Navigator>
     )
 }

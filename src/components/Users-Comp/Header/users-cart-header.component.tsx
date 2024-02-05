@@ -22,6 +22,12 @@ export const UsersCartHeaderComponent: React.FC<Props> = ({ title, screenType, a
 
     const navigation = useNavigation();
 
+    const checkAndNavigate = () => {
+        if(screenType === "ProfileInfo"){
+            navigation.navigate("EditProfile");
+        }
+    }
+
     return (
         <View 
             style={[ 
@@ -54,7 +60,9 @@ export const UsersCartHeaderComponent: React.FC<Props> = ({ title, screenType, a
                 </Text>
             </View>
 
-            <TouchableOpacity>
+            <TouchableOpacity
+                onPress={ checkAndNavigate }
+            >
                 <Text style={[ usersCartUsersStyles.upperEditTxt, { color: "#FF7622" } ]}>
                     { screenType == "Cart" ?  "EDIT ITEMS" : "EDIT" }
                 </Text>

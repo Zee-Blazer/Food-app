@@ -1,37 +1,45 @@
 
-import { View, SafeAreaView } from "react-native";
+import { View, SafeAreaView, ScrollView } from "react-native";
 
-// Styling
+// Styling 
 import { homeUsersScreenStyles } from "../../styles/screens/home-users.styles";
 import { usersCartUsersStyles } from "../../styles/screens/users-cart-users.styles";
 
 // Component
 import { FoodDetailsHeaderComponent } from "../../components/Users-Comp/Header/food-details-header.component";
-import { AddressDisplayInfoContainerComponent } from "../../components/Users-Comp/Address Section/address-display-info-container.component";
+import { EditProfilePicComponent } from "../../components/Users-Comp/Edit Profile/edit-profile-pic.component";
+import { EditProfielFormComponent } from "../../components/Users-Comp/Edit Profile/edit-profile-form.component";
 import { FormBtnComponent } from "../../components/Auth-Comp/form-btn.component";
 
-export const AddressUsersScreen = () => {
+export const EditProfileScreen = () => {
 
     return (
         <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
             <View style={ homeUsersScreenStyles.body }>
 
                 <FoodDetailsHeaderComponent 
-                    screen="My Address"
+                    screen="Edit Profile"
                     icon={ true }
                 />
 
-                <AddressDisplayInfoContainerComponent />
+                <ScrollView 
+                    showsVerticalScrollIndicator={ false }
+                >
 
+                    <EditProfilePicComponent />
+
+                    <EditProfielFormComponent />
+
+                </ScrollView>
+                
             </View>
 
             <View style={ usersCartUsersStyles.wildSpace }>
                 <FormBtnComponent 
-                    title="ADD NEW ADDRESS"
+                    title="SAVE"
                     func={ () => {} }
                 />
             </View>
-
         </SafeAreaView>
     )
 }

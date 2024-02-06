@@ -2,7 +2,7 @@
 // Navigation
 import { useNavigation } from "@react-navigation/native";
 
-import { SafeAreaView, Text, View, ScrollView, } from "react-native";
+import { SafeAreaView, View, ScrollView, } from "react-native";
 
 // Stylings
 import { homeUsersScreenStyles } from "../../styles/screens/home-users.styles";

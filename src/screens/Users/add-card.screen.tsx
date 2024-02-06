@@ -1,5 +1,5 @@
 
-import { View, Text, SafeAreaView } from "react-native";
+import { View, SafeAreaView } from "react-native";
 
 // Navigation
 import { useNavigation } from "@react-navigation/native";

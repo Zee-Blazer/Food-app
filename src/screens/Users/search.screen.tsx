@@ -6,7 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 
 // Styling
 import { homeUsersScreenStyles } from '../../styles/screens/home-users.styles';
-import { loginStyle } from '../../styles/screens/login-auth.styles';
 
 // Components
 import { SerachBarHeaderComponent } from '../../components/Users-Comp/Header/search-bar-header.component';

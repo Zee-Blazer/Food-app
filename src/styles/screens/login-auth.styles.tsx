@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 import { theme } from '../../infrastructure/Theme';
 
-const { width, height } = Dimensions.get("window");
+const { height } = Dimensions.get("window");
 
 export const loginStyle = StyleSheet.create({
     upperBg: {

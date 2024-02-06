@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react';
 
 // Icons
 import { AntDesign } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
 
 // Navigation 
 import { useNavigation } from '@react-navigation/native';

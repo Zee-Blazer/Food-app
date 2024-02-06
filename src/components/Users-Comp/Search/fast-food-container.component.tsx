@@ -1,11 +1,7 @@
 
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
-// Icons
-import { MaterialIcons } from '@expo/vector-icons';
-
 // Styling
-import { searchUsersStyles } from "../../../styles/screens/serach-users.styles";
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
 
 // Components

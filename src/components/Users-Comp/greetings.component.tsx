@@ -1,5 +1,5 @@
 
-import { TouchableOpacity, Text } from 'react-native';
+import { Text } from 'react-native';
 
 // Styling
 import { homeUsersScreenStyles } from '../../styles/screens/home-users.styles';

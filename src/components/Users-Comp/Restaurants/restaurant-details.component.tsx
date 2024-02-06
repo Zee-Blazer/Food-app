@@ -1,5 +1,5 @@
 
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { Text, TouchableOpacity, Image } from "react-native";
 
 // Navigation
 import { useNavigation } from "@react-navigation/native";

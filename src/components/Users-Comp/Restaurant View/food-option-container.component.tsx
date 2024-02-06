@@ -1,9 +1,6 @@
 
 import { ScrollView } from "react-native";
 
-// Styling
-import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
-
 // Component 
 import { FoodOptionComponent } from "./food-option.component";
 

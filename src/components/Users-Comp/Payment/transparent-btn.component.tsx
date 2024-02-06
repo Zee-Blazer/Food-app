@@ -1,5 +1,5 @@
 
-import { View, TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text } from "react-native";
 
 // Icon
 import { AntDesign } from '@expo/vector-icons';

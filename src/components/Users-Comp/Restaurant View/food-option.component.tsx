@@ -2,7 +2,6 @@
 import { TouchableOpacity, Text } from "react-native";
 
 // Styling
-import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";
 import { searchUsersStyles } from "../../../styles/screens/serach-users.styles";
 import { foodDetailsUserStyles } from "../../../styles/screens/food-details-users.styles";
 import { foodUserStyles } from "../../../styles/screens/food-users.styles";

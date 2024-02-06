@@ -1,5 +1,5 @@
 
-import { View, Text, Image } from "react-native";
+import { View, Image } from "react-native";
 
 // Styling
 import { restaurantViewUsersStyles } from "../../../styles/screens/restaurant-view-users.styles";

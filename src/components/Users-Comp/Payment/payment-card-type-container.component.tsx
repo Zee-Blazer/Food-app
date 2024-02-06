@@ -1,5 +1,5 @@
 
-import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
+import { View, ScrollView } from "react-native";
 
 // Styling
 import { paymentUsersStyles } from "../../../styles/screens/payment-users.styles";

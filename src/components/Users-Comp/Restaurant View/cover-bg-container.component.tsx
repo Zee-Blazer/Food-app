@@ -1,5 +1,5 @@
 
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text } from "react-native";
 
 // Styling
 import { restaurantViewUsersStyles } from "../../../styles/screens/restaurant-view-users.styles";

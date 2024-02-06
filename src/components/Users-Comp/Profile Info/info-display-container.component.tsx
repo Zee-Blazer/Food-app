@@ -1,5 +1,5 @@
 
-import { View, Text, TouchableOpacity, FlatList, Image } from "react-native";
+import { View, Text, FlatList, Image } from "react-native";
 
 // Styling
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";

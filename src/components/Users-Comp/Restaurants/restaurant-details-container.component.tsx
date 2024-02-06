@@ -1,5 +1,5 @@
 
-import { View, Text, TouchableOpacity } from "react-native";
+import { View } from "react-native";
 
 // Component
 import { CategoriesHeaderText } from "../Categories/category-header-text.component";

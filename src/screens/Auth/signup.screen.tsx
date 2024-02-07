@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Text, View, KeyboardAvoidingView, ScrollView } from "react-native";
+import { KeyboardAvoidingView, ScrollView } from "react-native";
 
 // Styling
 import { loginStyle } from "../../styles/screens/login-auth.styles";

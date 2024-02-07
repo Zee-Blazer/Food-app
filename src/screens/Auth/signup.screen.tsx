@@ -5,9 +5,6 @@ import { Text, View, KeyboardAvoidingView, ScrollView } from "react-native";
 // Styling
 import { loginStyle } from "../../styles/screens/login-auth.styles";
 
-// Icons
-import { FontAwesome } from '@expo/vector-icons';
-
 // Components
 import { TopImageComponent } from "../../components/Auth-Comp/top-image.component"; // The Top bar image and write up
 import { BottomFormComponent } from "../../components/Auth-Comp/bottom-form.component"; // The bottom Sign In options

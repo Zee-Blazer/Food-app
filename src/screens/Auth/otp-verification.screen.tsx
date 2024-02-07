@@ -7,7 +7,6 @@ import { loginStyle } from "../../styles/screens/login-auth.styles";
 
 // Components
 import { TopImageComponent } from "../../components/Auth-Comp/top-image.component";
-import { InputFieldComponent } from "../../components/Auth-Comp/input-field.component";
 import { FormBtnComponent } from '../../components/Auth-Comp/form-btn.component';
 
 export const OtpVerificationScreen = () => {

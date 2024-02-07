@@ -1,5 +1,5 @@
 
-import { View, Text, Image } from "react-native";
+import { View, Text } from "react-native";
 
 // Styling
 import { homeUsersScreenStyles } from "../../../styles/screens/home-users.styles";

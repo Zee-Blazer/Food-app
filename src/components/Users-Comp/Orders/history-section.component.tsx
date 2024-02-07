@@ -1,5 +1,5 @@
 
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View } from "react-native";
 
 // Component
 import { OrderItemComponent } from "./order-item.component";

@@ -13,7 +13,7 @@ import { ChefTabNavigation } from "./Chef-Navigation";
 export const Navigation = () => {
 
     const isAuthenticated = !!false;
-    const isAdmin = false;
+    const isAdmin = true;
 
     return (
         <NavigationContainer>

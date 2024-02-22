@@ -1,9 +1,15 @@
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+// React Native Component
+import { TouchableOpacity, StyleSheet } from 'react-native';
+
 // Icons
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+
+// Theme
+import { theme } from '../../Theme';
 
 // Screens
 import { ChefHomeScreen } from '../../../screens/Chef/home.screen';
@@ -16,9 +22,19 @@ export const ChefTabNavigation = () => {
         <ChefTab.Navigator
             initialRouteName="Home"
             screenOptions={{
-                // tabBarActiveTintColor: theme.colors.dark.bg.common,
-                // tabBarStyle: { backgroundColor: theme.colors.dark.bg.primary },
-                headerShown: false
+                tabBarActiveTintColor: theme.colors.icons.primary, //theme.colors.dark.bg.common,
+                tabBarInactiveTintColor: "#AFAFAF",
+                tabBarStyle: { 
+                    backgroundColor: theme.colors.bg.primary, 
+                    borderRadius: 21,
+                    height: 109,
+                    // padding: 21,
+                    position: "absolute",
+                    paddingTop: 14,
+                    // paddingBottom: 7
+                },
+                headerShown: false,
+                tabBarIconStyle: { fontSize: 25 }
             }}
             // tabBarOptions={
             //     // inactiveTintColor: theme.colors.dark.bg.plain
@@ -30,7 +46,7 @@ export const ChefTabNavigation = () => {
 
             <ChefTab.Screen name="Home" component={ ChefHomeScreen } 
                 options={{
-                    tabBarLabel: 'Home',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialIcons name="dashboard" size={ size } color={ color } />
                     ),
@@ -39,7 +55,7 @@ export const ChefTabNavigation = () => {
 
             <ChefTab.Screen name="Details" component={ ChefHomeScreen } 
                 options={{
-                    tabBarLabel: 'Details',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialIcons name="menu" size={ size } color={ color } />
                     ),
@@ -48,16 +64,20 @@ export const ChefTabNavigation = () => {
 
             <ChefTab.Screen name="Add" component={ ChefHomeScreen } 
                 options={{
-                    tabBarLabel: 'Add',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialIcons name="add" size={ size } color={ color } />
+                        <TouchableOpacity style={ styles.addIcon }>
+                            <MaterialIcons name="add" size={ size } color={ color } 
+                                style={ styles.icon }
+                            />
+                        </TouchableOpacity>
                     ),
                 }}
             />
 
             <ChefTab.Screen name="Notification" component={ ChefHomeScreen } 
                 options={{
-                    tabBarLabel: 'Notification',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialIcons name="notifications-none" size={ size } color={ color } />
                     ),
@@ -66,7 +86,7 @@ export const ChefTabNavigation = () => {
 
             <ChefTab.Screen name="Profile" component={ ChefHomeScreen } 
                 options={{
-                    tabBarLabel: 'Profile',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                         <AntDesign name="user" size={ size } color={ color } />
                     ),
@@ -76,3 +96,19 @@ export const ChefTabNavigation = () => {
         </ChefTab.Navigator>
     )
 }
+
+const styles = StyleSheet.create({
+    addIcon: {
+        // padding: 16,
+        backgroundColor: "#FFF1F2",
+        borderColor: "#FF7622",
+        borderWidth: 1,
+        borderRadius: 50,
+        marginBottom: 2
+    },
+    icon: {
+        margin: 10,
+        fontSize: 27,
+        color: "#FF7622"
+    }
+})

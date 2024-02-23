@@ -9,6 +9,7 @@ import { UsersNavigation } from "./User-Navigation";
 
 // Chef Tab Navigation
 import { ChefTabNavigation } from "./Chef-Navigation";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export const Navigation = () => {
 
@@ -16,13 +17,15 @@ export const Navigation = () => {
     const isAdmin = false;
 
     return (
-        <NavigationContainer>
-            { 
-                isAuthenticated ? 
-                    <AuthNavigation /> : 
-                    isAdmin ? 
-                        <UsersNavigation /> : <ChefTabNavigation /> 
-            }
-        </NavigationContainer>
+        <GestureHandlerRootView  style={{ flex: 1 }}>
+            <NavigationContainer>
+                { 
+                    isAuthenticated ? 
+                        <AuthNavigation /> : 
+                        isAdmin ? 
+                            <UsersNavigation /> : <ChefTabNavigation /> 
+                }
+            </NavigationContainer>
+        </GestureHandlerRootView>
     )
 }

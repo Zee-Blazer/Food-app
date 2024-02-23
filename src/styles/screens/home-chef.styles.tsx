@@ -56,5 +56,20 @@ export const homeChefScreenStyles = StyleSheet.create({
         fontFamily: theme.fonts.body,
         color: "#FB6D3A",
         textDecorationLine: 'underline'
+    },
+    starBlockCont: {
+        marginTop: 24
+    },
+    starRatingTxt: {
+        fontSize: 21,
+        fontFamily: theme.fonts.title,
+        color: "#FB6D3A",
+        marginLeft: 6
+    },
+    starBlockDescription: {
+        fontFamily: theme.fonts.body,
+        fontSize: 14,
+        marginLeft: 10,
+        marginTop: 4
     }
 })

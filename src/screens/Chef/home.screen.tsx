@@ -12,6 +12,7 @@ import BottomSheet from '@gorhom/bottom-sheet';
 import { DashboardHeaderComponent } from "../../components/Users-Comp/Header/dashboard-header.component";
 import { StatsContainerComponent } from "../../components/Chef-Comp/Statistics/stats-container.component";
 import { ReviewsInfoComponent } from '../../components/Chef-Comp/Statistics/reviews-info.component';
+import { PopularItemsContainerComponent } from '../../components/Chef-Comp/Popular Items/popular-items-container.component';
 
 export const ChefHomeScreen = () => {
 
@@ -35,6 +36,8 @@ export const ChefHomeScreen = () => {
                 <StatsContainerComponent />
 
                 <ReviewsInfoComponent />
+                
+                <PopularItemsContainerComponent />
 
                 <Text onPress={ () => setShowBottomSheet(true) }>Open Bottom Sheet</Text>
             </View>

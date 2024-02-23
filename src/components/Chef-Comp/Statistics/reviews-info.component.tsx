@@ -7,6 +7,9 @@ import { FontAwesome } from '@expo/vector-icons';
 // Styling
 import { homeChefScreenStyles } from "../../../styles/screens/home-chef.styles";
 
+// Components
+import { ItemHeaderContainerComponent } from "./item-header-container.component";
+
 export const ReviewsInfoComponent = () => {
 
     return (
@@ -16,12 +19,10 @@ export const ReviewsInfoComponent = () => {
                 homeChefScreenStyles.horiSpacer
             ]}
         >
-            <View style={ homeChefScreenStyles.flexDesign }>
-                <Text style={ homeChefScreenStyles.blockContTxt }>Reviews</Text>
-                <TouchableOpacity>
-                    <Text style={ homeChefScreenStyles.blockContTxtAll }>See All Reviews</Text>
-                </TouchableOpacity>
-            </View>
+            <ItemHeaderContainerComponent 
+                title="Reviews"
+                link="See All Reviews"
+            />
 
             <View style={[ homeChefScreenStyles.starBlockCont, homeChefScreenStyles.flexDisplay ]}>
                 <FontAwesome name="star" size={26} color="#FB6D3A" />

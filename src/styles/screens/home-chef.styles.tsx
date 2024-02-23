@@ -71,5 +71,39 @@ export const homeChefScreenStyles = StyleSheet.create({
         fontSize: 14,
         marginLeft: 10,
         marginTop: 4
+    },
+    popularItemCont: {
+        marginVertical: 14
+    },
+    popularItemImg: {
+        width: 150,
+        height: 153,
+        borderRadius: 18,
+        marginRight: 12
+    },
+    moneyStyles: {
+        fontSize: 22,
+        fontFamily: theme.fonts.title,
+        color: "#32343E"
+    },
+    downIconMenu: {
+        marginLeft: 5,
+        marginTop: 2
+    },
+    optionIconCont: {
+        padding: 6,
+        paddingBottom: 0,
+        paddingTop: 7,
+        borderWidth: 1,
+        borderColor: "#E8EAED",
+        marginTop: 6,
+        borderRadius: 10,
+        height: 32
+    },
+    optionContTxt: {
+        fontSize: 12,
+        color: "#9C9BA6",
+        fontFamily: theme.fonts.body,
+        marginLeft: 4
     }
 })

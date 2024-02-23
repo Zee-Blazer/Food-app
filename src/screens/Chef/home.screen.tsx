@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useRef } from 'react';
 
-import { View, SafeAreaView, Text } from "react-native";
+import { View, SafeAreaView, Text, ScrollView } from "react-native";
 
 // Styling
 import { homeChefScreenStyles } from "../../styles/screens/home-chef.styles";
@@ -14,6 +14,7 @@ import { StatsContainerComponent } from "../../components/Chef-Comp/Statistics/s
 import { ChartRevenueContainerComponent } from '../../components/Chef-Comp/Statistics/Chart Revenue/chart-revenue-container.component';
 import { ReviewsInfoComponent } from '../../components/Chef-Comp/Statistics/reviews-info.component';
 import { PopularItemsContainerComponent } from '../../components/Chef-Comp/Popular Items/popular-items-container.component';
+import { RunningOrdersContainerComponent } from '../../components/Chef-Comp/Running Orders/running-order-container.component';
 
 export const ChefHomeScreen = () => {
 
@@ -23,6 +24,8 @@ export const ChefHomeScreen = () => {
     const [showBottomSheet, setShowBottomSheet] = useState<boolean>(false);
 
     const snapToIndex = (index: number) => bottomSheetRef.current?.snapToIndex(index);
+
+    const openBottomSheet = () => setShowBottomSheet(true);
 
     return (
         <SafeAreaView style={{ backgroundColor: "#F7F8F9", flex: 1 }}>
@@ -34,13 +37,19 @@ export const ChefHomeScreen = () => {
                     />
                 </View>
 
-                <StatsContainerComponent />
+                <ScrollView style={ homeChefScreenStyles.statsMarginBottom }>
 
-                <ChartRevenueContainerComponent />
+                    <StatsContainerComponent 
+                        func={ openBottomSheet }
+                    />
 
-                <ReviewsInfoComponent />
+                    <ChartRevenueContainerComponent />
 
-                <PopularItemsContainerComponent />
+                    <ReviewsInfoComponent />
+
+                    <PopularItemsContainerComponent />
+
+                </ScrollView>
 
                 <Text onPress={ () => setShowBottomSheet(true) }>Open Bottom Sheet</Text>
             </View>
@@ -53,9 +62,7 @@ export const ChefHomeScreen = () => {
                     ref={ bottomSheetRef }
                     backgroundStyle={{ backgroundColor: "#FFFFFF" }}
                 >
-                    <View>
-                        <Text>Working perfectly well</Text>
-                    </View>
+                    <RunningOrdersContainerComponent />
                 </BottomSheet>
             }
         </SafeAreaView>

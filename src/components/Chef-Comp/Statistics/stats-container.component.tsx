@@ -8,17 +8,24 @@ import { homeChefScreenStyles } from "../../../styles/screens/home-chef.styles";
 import { RunningOrderStat } from "./running-order-stat.component";
 import { OrderRequestStats } from "./order-request-stat.component";
 
-export const StatsContainerComponent = () => {
+interface Props {
+    func: () => void
+}
+
+export const StatsContainerComponent: React.FC<Props> = ({ func }) => {
 
     return (
         <View 
             style={[ 
                 homeChefScreenStyles.statsContComp, 
                 homeChefScreenStyles.flexDesign, 
-                homeChefScreenStyles.horiSpacer
+                homeChefScreenStyles.horiSpacer,
+                { marginBottom: 8 }
             ]}
         >
-            <RunningOrderStat />
+            <RunningOrderStat 
+                func={ func }
+            />
             <OrderRequestStats />
         </View>
     )

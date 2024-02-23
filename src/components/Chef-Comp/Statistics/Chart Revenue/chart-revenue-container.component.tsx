@@ -26,7 +26,6 @@ export const ChartRevenueContainerComponent = () => {
 
             <ChartDiagramComponent />
 
-            <Text>Something awesome</Text>
         </View>
     )
 }

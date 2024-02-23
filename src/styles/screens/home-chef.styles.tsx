@@ -15,6 +15,9 @@ export const homeChefScreenStyles = StyleSheet.create({
     statsContComp: {
         marginTop: 24
     },
+    statsMarginBottom: {
+        marginBottom: 54
+    },
     flexDesign: {
         flexDirection: "row",
         justifyContent: "space-between"
@@ -43,7 +46,7 @@ export const homeChefScreenStyles = StyleSheet.create({
         backgroundColor: "white",
         paddingHorizontal: 16,
         paddingVertical: 10,
-        marginVertical: 16,
+        marginVertical: 8,
         borderRadius: 20
     },
     blockContTxt: {

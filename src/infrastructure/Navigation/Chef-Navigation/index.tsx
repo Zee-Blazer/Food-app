@@ -2,7 +2,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // React Native Component
-import { TouchableOpacity, StyleSheet } from 'react-native';
+import { TouchableOpacity, View, StyleSheet } from 'react-native';
 
 // Icons
 import { MaterialIcons } from '@expo/vector-icons';
@@ -13,6 +13,7 @@ import { theme } from '../../Theme';
 
 // Screens
 import { ChefHomeScreen } from '../../../screens/Chef/home.screen';
+import { ChefDetailsScreen } from '../../../screens/Chef/details.screen';
 
 const ChefTab = createBottomTabNavigator();
 
@@ -26,7 +27,7 @@ export const ChefTabNavigation = () => {
                 tabBarInactiveTintColor: "#AFAFAF",
                 tabBarStyle: { 
                     backgroundColor: theme.colors.bg.primary, 
-                    borderRadius: 21,
+                    borderRadius: 32,
                     height: 109,
                     // padding: 21,
                     position: "absolute",
@@ -53,7 +54,7 @@ export const ChefTabNavigation = () => {
                 }}
             />
 
-            <ChefTab.Screen name="Details" component={ ChefHomeScreen } 
+            <ChefTab.Screen name="Details" component={ ChefDetailsScreen } 
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
@@ -66,11 +67,11 @@ export const ChefTabNavigation = () => {
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
-                        <TouchableOpacity style={ styles.addIcon }>
+                        <View style={ styles.addIcon }>
                             <MaterialIcons name="add" size={ size } color={ color } 
                                 style={ styles.icon }
                             />
-                        </TouchableOpacity>
+                        </View>
                     ),
                 }}
             />
@@ -104,11 +105,15 @@ const styles = StyleSheet.create({
         borderColor: "#FF7622",
         borderWidth: 1,
         borderRadius: 50,
-        marginBottom: 2
+        marginBottom: 4,
+        marginHorizontal: 7
     },
     icon: {
         margin: 10,
-        fontSize: 27,
-        color: "#FF7622"
+        marginTop: 12,
+        fontSize: 37,
+        color: "#FF7622",
+        minWidth: 36,
+        minHeight: 36
     }
 })

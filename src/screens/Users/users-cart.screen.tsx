@@ -19,7 +19,7 @@ import { BottomSheetUserCartComponent } from '../../components/Users-Comp/Users 
 
 export const UsersCartScreen = () => {
 
-    const navigation = useNavigation();
+    // const navigation = useNavigation();
 
     const snapPoints = useMemo( () => ["40%"], [] );
     const bottomSheetRef = useRef<BottomSheet>(null);

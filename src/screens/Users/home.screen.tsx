@@ -21,7 +21,9 @@ export const HomeScreen = () => {
     return (
         <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
             <View style={ homeUsersScreenStyles.body }>
-                <DashboardHeaderComponent />
+                <DashboardHeaderComponent 
+                    isAdmin={ false }
+                />
 
                 <ScrollView
                     showsVerticalScrollIndicator={false}

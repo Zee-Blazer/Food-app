@@ -11,19 +11,25 @@ import { useNavigation } from '@react-navigation/native';
 // Styling
 import { homeUsersScreenStyles } from '../../../styles/screens/home-users.styles';
 
-export const DashboardHeaderComponent = () => {
+interface Props {
+    isAdmin: boolean
+}
+
+export const DashboardHeaderComponent: React.FC<Props> = ({ isAdmin }) => {
 
     const navigation = useNavigation();
 
     return (
         <View style={ homeUsersScreenStyles.flexDesign }>
             <View style={ homeUsersScreenStyles.flexDisplay }>
-                <TouchableOpacity onPress={ () => navigation.openDrawer() } >
+                <TouchableOpacity onPress={ () => !isAdmin && navigation.openDrawer() } >
                     <Image source={ require("../../../../assets/Images/menu.png") } />
                 </TouchableOpacity>
                 
                 <View style={ homeUsersScreenStyles.headerTextCont }>
-                    <Text style={ homeUsersScreenStyles.titleText }>DELIVER TO</Text>
+                    <Text style={ homeUsersScreenStyles.titleText }>
+                        { isAdmin ? "LOCATION" : "DELIVER TO" }
+                    </Text>
                     <TouchableOpacity style={ homeUsersScreenStyles.flexDisplay }>
                         <Text style={ homeUsersScreenStyles.nextTextLoc }>Holal Lab office</Text>
                         <AntDesign name="caretdown" size={10} color="black" style={ homeUsersScreenStyles.smallDownIcon } />

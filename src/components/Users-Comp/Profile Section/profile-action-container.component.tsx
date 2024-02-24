@@ -14,7 +14,8 @@ import { profileUsersStyles } from "../../../styles/screens/profile-users.styles
 interface data {
     iconUri: string,
     title: string,
-    link: string
+    link: string,
+    rate?: number
 }
 
 interface Props {
@@ -53,10 +54,15 @@ export const ProfileActionContainerComponent: React.FC<Props> = ({ data, other }
                             />
                             <Text style={ profileUsersStyles.profileActionContTxt }>{ item.title }</Text>
                         </View>
-                        <AntDesign 
-                            name="right" size={16} color="#181C2E" 
-                            style={{ marginTop: 6, marginLeft: 4 }} 
-                        />
+                        { !item.rate ?
+                            <AntDesign 
+                                name="right" size={16} color="#181C2E" 
+                                style={{ marginTop: 6, marginLeft: 4 }} 
+                            /> :
+                            <Text
+                                style={ profileUsersStyles.rateTxt }
+                            >{ item.rate }K</Text>
+                        }
                     </TouchableOpacity>
                 ) }
                 keyExtractor={ item => item.iconUri }

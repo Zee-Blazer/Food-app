@@ -50,5 +50,11 @@ export const profileUsersStyles = StyleSheet.create({
         fontSize: 14,
         fontFamily: theme.fonts.body,
         color: "#6B6E82"
+    },
+    rateTxt: {
+        fontSize: 17,
+        color: "#9C9BA6",
+        fontFamily: theme.fonts.title,
+        marginTop: 13
     }
 });

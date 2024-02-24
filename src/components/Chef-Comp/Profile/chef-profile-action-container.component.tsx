@@ -16,7 +16,7 @@ export const ChefProfileActionContainerComponent = () => {
 
     const data2 = [
         { iconUri: require("../../../../assets/Images/Icons/Withdrawal.png"), title: "Withdrawal History", link: "" },
-        { iconUri: require("../../../../assets/Images/Icons/Orders.png"), title: "Number of Orders", link: "" },
+        { iconUri: require("../../../../assets/Images/Icons/Orders.png"), title: "Number of Orders", link: "", rate: 29 },
     ];
 
     const data3 = [

@@ -14,6 +14,7 @@ import { theme } from '../../Theme';
 // Screens
 import { ChefHomeScreen } from '../../../screens/Chef/home.screen';
 import { ChefDetailsScreen } from '../../../screens/Chef/details.screen';
+import { ChefProfileScreen } from '../../../screens/Chef/profile.screen';
 
 const ChefTab = createBottomTabNavigator();
 
@@ -85,7 +86,7 @@ export const ChefTabNavigation = () => {
                 }}
             />
 
-            <ChefTab.Screen name="Profile" component={ ChefHomeScreen } 
+            <ChefTab.Screen name="Profile" component={ ChefProfileScreen } 
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (

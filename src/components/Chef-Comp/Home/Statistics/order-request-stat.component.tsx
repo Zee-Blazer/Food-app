@@ -2,7 +2,7 @@
 import { TouchableOpacity, Text } from "react-native";
 
 // Styling
-import { homeChefScreenStyles } from "../../../styles/screens/home-chef.styles";
+import { homeChefScreenStyles } from "../../../../styles/screens/home-chef.styles";
 
 export const OrderRequestStats = () => {
 

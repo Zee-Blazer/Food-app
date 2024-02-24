@@ -18,10 +18,11 @@ interface data {
 }
 
 interface Props {
-    data: data[]
+    data: data[],
+    other?: boolean
 }
 
-export const ProfileActionContainerComponent: React.FC<Props> = ({ data }) => {
+export const ProfileActionContainerComponent: React.FC<Props> = ({ data, other }) => {
 
     const navigation = useNavigation();
 
@@ -32,7 +33,7 @@ export const ProfileActionContainerComponent: React.FC<Props> = ({ data }) => {
     }
 
     return (
-        <View style={[ profileUsersStyles.profileActionCont ]}>
+        <View style={[ profileUsersStyles.profileActionCont, other && { backgroundColor: "white" } ]}>
 
             <FlatList 
                 data={ data }

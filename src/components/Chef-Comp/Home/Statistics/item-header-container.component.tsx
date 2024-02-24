@@ -5,7 +5,7 @@ import { View, TouchableOpacity, Text } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 
 // Styling
-import { homeChefScreenStyles } from "../../../styles/screens/home-chef.styles";
+import { homeChefScreenStyles } from "../../../../styles/screens/home-chef.styles";
 
 interface Props {
     title: string,

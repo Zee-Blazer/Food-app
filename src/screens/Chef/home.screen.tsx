@@ -10,11 +10,11 @@ import BottomSheet from '@gorhom/bottom-sheet';
 
 // Components
 import { DashboardHeaderComponent } from "../../components/Users-Comp/Header/dashboard-header.component";
-import { StatsContainerComponent } from "../../components/Chef-Comp/Statistics/stats-container.component";
-import { ChartRevenueContainerComponent } from '../../components/Chef-Comp/Statistics/Chart Revenue/chart-revenue-container.component';
-import { ReviewsInfoComponent } from '../../components/Chef-Comp/Statistics/reviews-info.component';
-import { PopularItemsContainerComponent } from '../../components/Chef-Comp/Popular Items/popular-items-container.component';
-import { RunningOrdersContainerComponent } from '../../components/Chef-Comp/Running Orders/running-order-container.component';
+import { StatsContainerComponent } from '../../components/Chef-Comp/Home/Statistics/stats-container.component'; 
+import { ChartRevenueContainerComponent } from '../../components/Chef-Comp/Home/Statistics/Chart Revenue/chart-revenue-container.component';
+import { ReviewsInfoComponent } from '../../components/Chef-Comp/Home/Statistics/reviews-info.component';
+import { PopularItemsContainerComponent } from '../../components/Chef-Comp/Home/Popular Items/popular-items-container.component';
+import { RunningOrdersContainerComponent } from '../../components/Chef-Comp/Home/Running Orders/running-order-container.component';
 
 export const ChefHomeScreen = () => {
 
@@ -23,9 +23,16 @@ export const ChefHomeScreen = () => {
 
     const [showBottomSheet, setShowBottomSheet] = useState<boolean>(false);
 
-    const snapToIndex = (index: number) => bottomSheetRef.current?.snapToIndex(index);
+    const snapToIndex = (index: number) => {
+        bottomSheetRef.current?.snapToIndex(index);
+        setShowBottomSheet(false);
+    }
 
-    const openBottomSheet = () => setShowBottomSheet(true);
+    const openBottomSheet = () => {
+        setShowBottomSheet(true);
+        bottomSheetRef.current?.expand();
+        // snapToIndex(0);
+    }
 
     return (
         <SafeAreaView style={{ backgroundColor: "#F7F8F9", flex: 1 }}>

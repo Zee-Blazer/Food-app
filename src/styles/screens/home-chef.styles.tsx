@@ -108,5 +108,64 @@ export const homeChefScreenStyles = StyleSheet.create({
         color: "#9C9BA6",
         fontFamily: theme.fonts.body,
         marginLeft: 4
-    }
+    },
+    runningOrdersTxt: {
+        fontSize: 17,
+        color: "#181C2E",
+        fontFamily: theme.fonts.body,
+        marginBottom: 15
+    },
+    runningOrderCont: {
+        marginVertical: 10
+    },
+    runningOrderImg: {
+        width: 102,
+        height: 102,
+        borderRadius: 20,
+        marginRight: 12
+    },
+    hashTagTxt: {
+        fontSize: 14,
+        fontFamily: theme.fonts.body,
+        color: "#ED7A63",
+        marginBottom: 4
+    },
+    runningOrderMealTxt: {
+        fontSize: 14, 
+        fontFamily: theme.fonts.title,
+        color: "#32343E",
+        marginBottom: 3
+    },
+    runningIdTxt: {
+        fontSize: 14,
+        fontFamily: theme.fonts.body,
+        color: "#9C9BA6",
+        marginBottom: 6
+    },
+    runningBillTxt: {
+        fontSize: 18,
+        fontFamily: theme.fonts.body,
+        color: "#32343E",
+        marginTop: 5
+    },
+    runningOptBtn: {
+        paddingHorizontal: 13,
+        paddingVertical: 10,
+        borderRadius: 10
+    },
+    runnnigOptBtnTxt: {
+        fontSize: 14,
+        fontFamily: theme.fonts.body,
+        textAlign: 'center',
+    },
+    runningOptDoneBtn: {
+        backgroundColor: "#FF7622",
+        marginRight: 15
+    },
+    runningOptCancelBtn: {
+        borderWidth: 1,
+        borderColor: "#FF7622"
+    },
+    runnnigOptBtnDoneTxt: {},
+    runnnigOptBtnCancelTxt: {}
 })

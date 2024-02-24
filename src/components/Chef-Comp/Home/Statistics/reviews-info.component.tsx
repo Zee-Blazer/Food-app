@@ -5,7 +5,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { FontAwesome } from '@expo/vector-icons';
 
 // Styling
-import { homeChefScreenStyles } from "../../../styles/screens/home-chef.styles";
+import { homeChefScreenStyles } from "../../../../styles/screens/home-chef.styles";
 
 // Components
 import { ItemHeaderContainerComponent } from "./item-header-container.component";

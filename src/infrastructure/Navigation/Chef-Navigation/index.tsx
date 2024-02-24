@@ -15,6 +15,7 @@ import { theme } from '../../Theme';
 import { ChefHomeScreen } from '../../../screens/Chef/home.screen';
 import { ChefDetailsScreen } from '../../../screens/Chef/details.screen';
 import { ChefProfileScreen } from '../../../screens/Chef/profile.screen';
+import { ChefNotificationScreen } from '../../../screens/Chef/notification.screen';
 
 const ChefTab = createBottomTabNavigator();
 
@@ -30,20 +31,12 @@ export const ChefTabNavigation = () => {
                     backgroundColor: theme.colors.bg.primary, 
                     borderRadius: 32,
                     height: 109,
-                    // padding: 21,
                     position: "absolute",
                     paddingTop: 14,
-                    // paddingBottom: 7
                 },
                 headerShown: false,
                 tabBarIconStyle: { fontSize: 25 }
             }}
-            // tabBarOptions={
-            //     // inactiveTintColor: theme.colors.dark.bg.plain
-            //     // style: {
-            //     //     backgroundColor: "white"
-            //     // }
-            // }
         >
 
             <ChefTab.Screen name="Home" component={ ChefHomeScreen } 
@@ -77,7 +70,7 @@ export const ChefTabNavigation = () => {
                 }}
             />
 
-            <ChefTab.Screen name="Notification" component={ ChefHomeScreen } 
+            <ChefTab.Screen name="Notification" component={ ChefNotificationScreen } 
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (

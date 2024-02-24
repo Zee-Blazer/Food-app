@@ -1,5 +1,5 @@
 
-import { View, TouchableOpacity, Image } from "react-native";
+import { View, TouchableOpacity, Image, Text } from "react-native";
 
 // Icons
 import { FontAwesome } from '@expo/vector-icons';
@@ -22,6 +22,8 @@ export const NotificationContainerComponent = () => {
             <View style={ notificationChefStyles.iconPersonCont }>
                 <FontAwesome name="user" size={42} color="#F0F4F9" style={{ alignSelf: "center" }} />
             </View>
+
+            <Text></Text>
 
         </TouchableOpacity>
     )

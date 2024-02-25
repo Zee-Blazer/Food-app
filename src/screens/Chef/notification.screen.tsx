@@ -1,5 +1,5 @@
 
-import { View, SafeAreaView, Text } from "react-native";
+import { View, SafeAreaView, Text, ScrollView } from "react-native";
 
 // Styling
 import { homeChefScreenStyles } from "../../styles/screens/home-chef.styles";
@@ -15,7 +15,41 @@ export const ChefNotificationScreen = () => {
             <View style={ homeChefScreenStyles.body }>
                 <MainNotificationContainerComponent />
 
-                <NotificationContainerComponent />
+                
+                <ScrollView>
+
+                    <NotificationContainerComponent 
+                        name="Tanbir Ahmed"
+                        msg="Place a new order"
+                        time={ 20 }
+                    />
+
+                    <NotificationContainerComponent 
+                        name="Salim Smith"
+                        msg="left a 5 star review"
+                        time={ 22 }
+                    />
+
+                    <NotificationContainerComponent 
+                        name="Royal Bengol"
+                        msg="agreed to cancel"
+                        time={ 23 }
+                    />
+
+                    <NotificationContainerComponent 
+                        name="Pabel Vuiya"
+                        msg="Placed a new order"
+                        time={ 23 }
+                    />
+
+                    {/* <NotificationContainerComponent 
+                        name="Royal Bengol"
+                        msg="agreed to cancel"
+                        time={ 23 }
+                    /> */}
+
+                </ScrollView>
+
             </View>
         </SafeAreaView>
     )

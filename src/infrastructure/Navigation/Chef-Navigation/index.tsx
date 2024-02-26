@@ -6,6 +6,7 @@ import { TouchableOpacity, View, StyleSheet } from 'react-native';
 
 // Icons
 import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 
 // Theme
@@ -16,6 +17,7 @@ import { ChefHomeScreen } from '../../../screens/Chef/home.screen';
 import { ChefDetailsScreen } from '../../../screens/Chef/details.screen';
 import { ChefProfileScreen } from '../../../screens/Chef/profile.screen';
 import { ChefNotificationScreen } from '../../../screens/Chef/notification.screen';
+import { ChefAddScreen } from '../../../screens/Chef/add.screen';
 
 const ChefTab = createBottomTabNavigator();
 
@@ -43,7 +45,7 @@ export const ChefTabNavigation = () => {
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialIcons name="dashboard" size={ size } color={ color } />
+                        <MaterialCommunityIcons name="view-dashboard-outline" size={ size } color={ color } />
                     ),
                 }}
             />
@@ -57,7 +59,7 @@ export const ChefTabNavigation = () => {
                 }}
             />
 
-            <ChefTab.Screen name="Add" component={ ChefHomeScreen } 
+            <ChefTab.Screen name="Add" component={ ChefAddScreen } 
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (

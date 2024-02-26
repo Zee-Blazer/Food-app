@@ -6,7 +6,7 @@ import { theme } from "../../infrastructure/Theme";
 
 export const notificationChefStyles = StyleSheet.create({
     headerNotificationTxt: {
-        fontSize: 21,
+        fontSize: 18,
         fontFamily: theme.fonts.body,
         marginVertical: 12,
         marginBottom: 21

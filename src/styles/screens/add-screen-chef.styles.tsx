@@ -29,5 +29,27 @@ export const addScreenChefStyles = StyleSheet.create({
         fontFamily: theme.fonts.body,
         color: "#32343E",
         fontSize: 12
+    },
+    selectedImg: {
+        width: 111,
+        height: 101,
+        borderRadius: 20,
+        marginRight: 24
+    },
+    uploadCont: {
+        backgroundColor: "#FDFDFD",
+        borderRadius: 10,
+        borderWidth: 3,
+        borderStyle: 'dotted',
+        borderColor: "#E8EAED",
+        paddingVertical: 13,
+        paddingHorizontal: 35
+    },
+    uploadContTxt: {
+        color: "#9C9BA6",
+        fontSize: 13,
+        fontFamily: theme.fonts.body,
+        textAlign: "center",
+        marginTop: 9
     }
 });

@@ -7,7 +7,7 @@ import { theme } from "../../infrastructure/Theme";
 export const homeUsersScreenStyles = StyleSheet.create({
     body: {
         flex: 1,
-        marginHorizontal: theme.space[9],
+        marginHorizontal: theme.space[8],
         backgroundColor: "white",
     },
     flexDesign: {

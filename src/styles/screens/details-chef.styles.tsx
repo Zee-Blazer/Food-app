@@ -34,5 +34,46 @@ export const detailsChefStyles = StyleSheet.create({
         color: "#9C9BA6",
         marginTop: 24,
         marginBottom: 10
+    },
+    mealDetailImg: {
+        width: 102,
+        height: 102,
+        borderRadius: 20,
+        marginRight: 12
+    },
+    properSection: {
+        width: 250, 
+        marginTop: 4
+    },
+    mealDetailTxt: {
+        fontSize: 14,
+        fontFamily: theme.fonts.title,
+        color: "#32343E"
+    },
+    mealDetailTypeBox: {
+        paddingHorizontal: 12,
+        paddingVertical: 4,
+        backgroundColor: "#ff772231",
+        borderRadius: 30
+    },
+    mealDetailTypeTxt: {
+        color: "#FF7622",
+    },
+    mealDetailTypePriceTxt: {
+        color: "#32343E",
+        fontSize: 17,
+        fontFamily: theme.fonts.title
+    },
+    mealRatingTxt: {
+        color: "#FB6D3A",
+        fontSize: 14,
+        fontFamily: theme.fonts.title,
+        marginLeft: 4,
+        marginRight: 10
+    },
+    mealRatingDetailsRec: {
+        color: "#AFAFAF",
+        fontSize: 14,
+        fontFamily: theme.fonts.body
     }
 });

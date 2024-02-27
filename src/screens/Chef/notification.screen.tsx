@@ -13,7 +13,9 @@ export const ChefNotificationScreen = () => {
     return (
         <SafeAreaView style={{ backgroundColor: "#F7F8F9", flex: 1 }}>
             <View style={ homeChefScreenStyles.body }>
-                <MainNotificationContainerComponent />
+                <MainNotificationContainerComponent 
+                    title="Notifications"
+                />
 
                 
                 <ScrollView>

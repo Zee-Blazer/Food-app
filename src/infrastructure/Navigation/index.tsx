@@ -8,7 +8,7 @@ import { AuthNavigation } from "./auth.nav";
 import { UsersNavigation } from "./User-Navigation";
 
 // Chef Tab Navigation
-import { ChefTabNavigation } from "./Chef-Navigation";
+import { MainNavigation } from "./Chef-Navigation";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export const Navigation = () => {
@@ -23,7 +23,7 @@ export const Navigation = () => {
                     isAuthenticated ? 
                         <AuthNavigation /> : 
                         isAdmin ? 
-                            <UsersNavigation /> : <ChefTabNavigation /> 
+                            <UsersNavigation /> : <MainNavigation /> 
                 }
             </NavigationContainer>
         </GestureHandlerRootView>

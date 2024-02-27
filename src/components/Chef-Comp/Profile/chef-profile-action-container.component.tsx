@@ -20,7 +20,7 @@ export const ChefProfileActionContainerComponent = () => {
     ];
 
     const data3 = [
-        { iconUri: require("../../../../assets/Images/Icons/Reviews.png"), title: "User Reviews", link: "" },
+        { iconUri: require("../../../../assets/Images/Icons/Reviews.png"), title: "User Reviews", link: "Reviews" },
     ];
 
     const data4 = [

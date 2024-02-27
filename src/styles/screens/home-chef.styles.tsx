@@ -10,7 +10,7 @@ export const homeChefScreenStyles = StyleSheet.create({
         backgroundColor: "#F7F8F9",
     },
     horiSpacer: {
-        marginHorizontal: theme.space[9],
+        marginHorizontal: theme.space[8],
     },
     statsContComp: {
         marginTop: 24

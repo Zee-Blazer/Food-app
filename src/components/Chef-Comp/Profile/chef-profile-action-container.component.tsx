@@ -1,5 +1,5 @@
 
-import { View } from "react-native";
+import { View, ScrollView } from "react-native";
 
 // Styling
 import { homeChefScreenStyles } from "../../../styles/screens/home-chef.styles";
@@ -29,25 +29,29 @@ export const ChefProfileActionContainerComponent = () => {
 
     return (
         <View style={[ homeChefScreenStyles.horiSpacer, { marginTop: 15 } ]}>
-            <ProfileActionContainerComponent 
-                data={ data1 }
-                other={ true }
-            />
+            <ScrollView>
 
-            <ProfileActionContainerComponent 
-                data={ data2 }
-                other={ true }
-            />
+                <ProfileActionContainerComponent 
+                    data={ data1 }
+                    other={ true }
+                />
 
-            <ProfileActionContainerComponent 
-                data={ data3 }
-                other={ true }
-            />
+                <ProfileActionContainerComponent 
+                    data={ data2 }
+                    other={ true }
+                />
 
-            <ProfileActionContainerComponent 
-                data={ data4 }
-                other={ true }
-            />
+                <ProfileActionContainerComponent 
+                    data={ data3 }
+                    other={ true }
+                />
+
+                <ProfileActionContainerComponent 
+                    data={ data4 }
+                    other={ true }
+                />
+
+            </ScrollView>
         </View>
     )
 }

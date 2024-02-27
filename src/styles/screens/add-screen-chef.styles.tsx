@@ -21,7 +21,6 @@ export const addScreenChefStyles = StyleSheet.create({
     textInputItem: {
         borderWidth: 1,
         borderColor: "#E8EAED",
-        width: '100%',
         borderRadius: 10,
         paddingVertical: 18, 
         paddingHorizontal: 16,
@@ -29,6 +28,11 @@ export const addScreenChefStyles = StyleSheet.create({
         fontFamily: theme.fonts.body,
         color: "#32343E",
         fontSize: 12
+    },
+    fullSize: {
+        width: 115,
+        paddingVertical: 14,
+        fontSize: 14
     },
     selectedImg: {
         width: 111,
@@ -51,5 +55,24 @@ export const addScreenChefStyles = StyleSheet.create({
         fontFamily: theme.fonts.body,
         textAlign: "center",
         marginTop: 9
+    },
+    checkableOption: {
+        borderWidth: 2,
+        borderColor: "#E8EAED",
+        paddingVertical: 14,
+        paddingHorizontal: 16,
+        borderRadius: 10,
+        backgroundColor: "#FDFDFD",
+    },
+    checkableOptionTxt: {
+        fontFamily: theme.fonts.body,
+        color: "#32343E",
+        fontSize: 14
+    },
+    checkableOptionActive: {
+        borderColor: "#FB6D3A"
+    },
+    checkableOptionTxtActive: {
+        color: "#FB6D3A"
     }
 });

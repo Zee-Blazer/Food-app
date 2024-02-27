@@ -7,6 +7,7 @@ import { homeChefScreenStyles } from "../../styles/screens/home-chef.styles";
 // Component
 import { ChefAddHeaderComponent } from "../../components/Chef-Comp/Add/add-header.component";
 import { AddFormDataContainerComponent } from "../../components/Chef-Comp/Add/add-form-data-container.component";
+import { FormBtnComponent } from "../../components/Auth-Comp/form-btn.component";
 
 export const ChefAddScreen = () => {
 
@@ -18,6 +19,13 @@ export const ChefAddScreen = () => {
 
                 <AddFormDataContainerComponent />
 
+            </View>
+
+            <View style={[ homeChefScreenStyles.horiSpacer, { marginBottom: 54 } ]}>
+                <FormBtnComponent 
+                    title="SAVE"
+                    func={ () => {} }
+                />
             </View>
         </SafeAreaView>
     )

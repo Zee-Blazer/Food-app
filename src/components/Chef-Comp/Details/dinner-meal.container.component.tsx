@@ -12,11 +12,12 @@ export const DinnerMealsContainerComponent = () => {
 
     return (
         <View style={ homeChefScreenStyles.horiSpacer }>
-            <Text style={ detailsChefStyles.introDetailsTxt }>Total 03 items</Text>
+            <Text style={ detailsChefStyles.introDetailsTxt }>Total 01 items</Text>
 
-            <ScrollView>
-                <MealDetailComponent />
-                <MealDetailComponent />
+            <ScrollView
+                showsVerticalScrollIndicator={ false }
+                style={{ paddingBottom: 52, marginBottom: 242 }}
+            >
                 <MealDetailComponent />
             </ScrollView>
         </View>

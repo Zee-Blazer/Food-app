@@ -8,7 +8,7 @@ import { homeChefScreenStyles } from "../../styles/screens/home-chef.styles";
 // Components
 import { MainNotificationContainerComponent } from "../../components/Chef-Comp/Notification/main-notification-container.component";
 import { NavItemDetailsContainerComponent } from "../../components/Chef-Comp/Details/nav-item-details-container.component";
-import { AllMealsContainerComponent } from "../../components/Chef-Comp/Details/all-meals-container.component";
+import { DefinePickerContainerComponent } from "../../components/Chef-Comp/Details/define-picker-container.component";
 
 export const ChefDetailsScreen = () => {
 
@@ -29,7 +29,9 @@ export const ChefDetailsScreen = () => {
                     func={ changeScreen }
                 />
 
-                <AllMealsContainerComponent />
+                <DefinePickerContainerComponent 
+                    screen={ screen }
+                />
             </View>
         </SafeAreaView>
     )

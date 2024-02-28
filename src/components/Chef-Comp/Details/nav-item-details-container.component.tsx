@@ -5,20 +5,26 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { homeChefScreenStyles } from "../../../styles/screens/home-chef.styles";
 import { detailsChefStyles } from "../../../styles/screens/details-chef.styles";
 
-export const NavItemDetailsContainerComponent = () => {
+interface Props {
+    screen: string,
+    func: (e: string) => void
+}
+
+export const NavItemDetailsContainerComponent: React.FC<Props> = ({ screen, func }) => {
 
     return (
         <View style={[ homeChefScreenStyles.flexDesign, detailsChefStyles.navItemContainer ]}>
             <TouchableOpacity 
                 style={[ 
                     detailsChefStyles.navItemTxtCont,
-                    detailsChefStyles.navItemTxtContActive
+                    screen == "All" && detailsChefStyles.navItemTxtContActive
                 ]}
+                onPress={ () => func("All") }
             >
                 <Text 
                     style={[ 
                         detailsChefStyles.navItemTxt,
-                        detailsChefStyles.navItemTxtActive
+                        screen == "All" && detailsChefStyles.navItemTxtActive
                     ]}
                 >All</Text>
             </TouchableOpacity>
@@ -26,13 +32,14 @@ export const NavItemDetailsContainerComponent = () => {
             <TouchableOpacity
                 style={[ 
                     detailsChefStyles.navItemTxtCont,
-                    // detailsChefStyles.navItemTxtContActive
+                    screen == "Breakfast" && detailsChefStyles.navItemTxtContActive
                 ]}
+                onPress={ () => func("Breakfast") }
             >
                 <Text
                     style={[ 
                         detailsChefStyles.navItemTxt,
-                        // detailsChefStyles.navItemTxtActive
+                        screen == "Breakfast" && detailsChefStyles.navItemTxtActive
                     ]}
                 >Breakfast</Text>
             </TouchableOpacity>
@@ -40,13 +47,14 @@ export const NavItemDetailsContainerComponent = () => {
             <TouchableOpacity
                 style={[ 
                     detailsChefStyles.navItemTxtCont,
-                    // detailsChefStyles.navItemTxtContActive
+                    screen == "Lunch" && detailsChefStyles.navItemTxtContActive
                 ]}
+                onPress={ () => func("Lunch") }
             >
                 <Text
                     style={[ 
                         detailsChefStyles.navItemTxt,
-                        // detailsChefStyles.navItemTxtActive
+                        screen == "Lunch" && detailsChefStyles.navItemTxtActive
                     ]}
                 >Lunch</Text>
             </TouchableOpacity>
@@ -54,13 +62,14 @@ export const NavItemDetailsContainerComponent = () => {
             <TouchableOpacity
                 style={[ 
                     detailsChefStyles.navItemTxtCont,
-                    // detailsChefStyles.navItemTxtContActive
+                    screen == "Dinner" && detailsChefStyles.navItemTxtContActive
                 ]}
+                onPress={ () => func("Dinner") }
             >
                 <Text
                     style={[ 
                         detailsChefStyles.navItemTxt,
-                        // detailsChefStyles.navItemTxtActive
+                        screen == "Dinner" && detailsChefStyles.navItemTxtActive
                     ]}
                 >Dinner</Text>
             </TouchableOpacity>

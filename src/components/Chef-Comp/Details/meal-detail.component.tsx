@@ -4,11 +4,16 @@ import { View, TouchableOpacity, Text, Image } from "react-native";
 // Icons
 import { Entypo } from '@expo/vector-icons';
 
+// Navigation
+import { useNavigation } from "@react-navigation/native";
+
 // Styling
 import { homeChefScreenStyles } from "../../../styles/screens/home-chef.styles";
 import { detailsChefStyles } from "../../../styles/screens/details-chef.styles";
 
 export const MealDetailComponent = () => {
+
+    const navigation = useNavigation();
 
     return (
         <TouchableOpacity
@@ -16,6 +21,7 @@ export const MealDetailComponent = () => {
                 homeChefScreenStyles.flexDisplay,
                 { marginVertical: 10 }
             ]}
+            onPress={ () => navigation.navigate('FoodDetails') }
         >
             <Image 
                 source={ require('../../../../assets/Images/Pizza/pizza1.jpg') }

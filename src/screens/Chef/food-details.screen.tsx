@@ -23,7 +23,7 @@ export const ChefFoodDetails = () => {
 
                 <MainFoodContainerComponent />
 
-                <Text>This is the Chef Food Details Screen</Text>
+                
             </View>
         </SafeAreaView>
     )

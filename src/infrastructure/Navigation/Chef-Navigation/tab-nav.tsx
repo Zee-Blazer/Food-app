@@ -2,7 +2,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // React Native Component
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 
 // Icons
 import { MaterialIcons } from '@expo/vector-icons';
@@ -35,6 +35,17 @@ export const ChefTabNavigation = () => {
                     height: 109,
                     position: "absolute",
                     paddingTop: 14,
+                    ...Platform.select({
+                        android: {
+                          elevation: 5,
+                        },
+                        ios: {
+                          shadowColor: '#000',
+                          shadowOffset: { width: 0, height: 2 },
+                          shadowOpacity: 0.2,
+                          shadowRadius: 4,
+                        },
+                      }),
                 },
                 headerShown: false,
                 tabBarIconStyle: { fontSize: 25 }

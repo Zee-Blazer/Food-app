@@ -3,9 +3,11 @@ import { View, Text } from "react-native";
 
 // Icons
 import { FontAwesome } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 
 // Styling
 import { homeChefScreenStyles } from "../../../styles/screens/home-chef.styles";
+import { detailsChefStyles } from "../../../styles/screens/details-chef.styles";
 import { foodDetailsChefStyles } from "../../../styles/screens/food-details-chef.styles";
 
 export const MealDescriptionComponent = () => {
@@ -27,7 +29,14 @@ export const MealDescriptionComponent = () => {
                         name="map-marker" size={12} color="#AFAFAF" 
                         style={{ marginTop: 3, marginRight: 2 }} 
                     />
-                    <Text>Kentucky 39495</Text>
+                    <Text style={ foodDetailsChefStyles.mealDescriptLocateTxt }
+                    >Kentucky 39495</Text>
+                </View>
+
+                <View style={[ homeChefScreenStyles.flexDesign, { alignItems: "center" } ]}>
+                    <Entypo name="star" size={16} color="#FB6D3A" />
+                    <Text style={ detailsChefStyles.mealRatingTxt }>4.9</Text>
+                    <Text style={ detailsChefStyles.mealRatingDetailsRec }>(10 Review)</Text>
                 </View>
             </View>
         </View>

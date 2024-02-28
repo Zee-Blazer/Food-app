@@ -7,6 +7,7 @@ import { foodDetailsChefStyles } from "../../../styles/screens/food-details-chef
 
 // Component
 import { MealDescriptionComponent } from "./meal-description.component";
+import { MainDescriptionContainerComponent } from "./main-description-container.component";
 
 export const MainFoodContainerComponent = () => {
 
@@ -28,6 +29,9 @@ export const MainFoodContainerComponent = () => {
             </View>
 
             <MealDescriptionComponent />
+
+            <MainDescriptionContainerComponent />
+
         </View>
     )
 }

@@ -32,5 +32,28 @@ export const foodDetailsChefStyles = StyleSheet.create({
         fontSize: 18,
         fontFamily: theme.fonts.title,
         color: "#32343E"
+    },
+    mealDescriptLocateTxt: {
+        fontSize: 13,
+        fontFamily: theme.fonts.body,
+        color: "#AFAFAF"
+    },
+    descriptionCont: {
+        paddingTop: 20,
+        borderTopWidth: 1,
+        borderTopColor: "#F0F4F9",
+        marginTop: 20,
+        marginHorizontal: 34
+    },
+    descriptionMainTxt: {
+        fontSize: 14,
+        fontFamily: theme.fonts.body,
+        color: "#32343E",
+        marginBottom: 14
+    },
+    descriptionParaTxt: {
+        fontSize: 13,
+        fontFamily: theme.fonts.body,
+        color: "#747783"
     }
 });

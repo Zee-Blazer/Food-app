@@ -3,11 +3,17 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+// Firebase initilization
+import * as firebase from 'firebase/app';
+import { firebaseConfig } from './src/firebaseConfig'; 
+
 import { useFonts } from 'expo-font';
 
 import { Navigation } from './src/infrastructure/Navigation';
 
 export default function App() {
+
+  firebase.initializeApp(firebaseConfig);
   
   let [ fontsLoaded ] = useFonts({
     "Sen-Bold": require("./assets/Fonts/Sen-Bold.ttf"),

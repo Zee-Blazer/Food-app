@@ -13,7 +13,7 @@ import { Navigation } from './src/infrastructure/Navigation';
 
 export default function App() {
 
-  firebase.initializeApp(firebaseConfig);
+  // firebase.initializeApp(firebaseConfig);
   
   let [ fontsLoaded ] = useFonts({
     "Sen-Bold": require("./assets/Fonts/Sen-Bold.ttf"),
